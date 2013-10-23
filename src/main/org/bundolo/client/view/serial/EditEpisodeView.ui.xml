@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget"
+xmlns:ck="urn:import:com.axeiya.gwtckeditor.client" xmlns:dp="urn:import:com.google.gwt.user.datepicker.client">
+
+	<g:HTMLPanel>
+		<g:Label ui:field="nameLabel"/><g:TextBox ui:field="name"></g:TextBox>
+		<g:Label ui:field="textLabel"/><ck:CKEditor ui:field="text"></ck:CKEditor>
+		<c:RaphaelButtonWidget ui:field="saveEpisodeButton" icon="episode" label="save" modifier="confirm"/>
+		<c:RaphaelButtonWidget ui:field="cancelEpisodeButton" icon="episode" label="cancel" modifier="cancel"/>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

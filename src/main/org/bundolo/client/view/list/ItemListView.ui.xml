@@ -1,0 +1,36 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget" xmlns:p="urn:import:com.google.gwt.user.cellview.client">
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="itemListContainer" styleName="itemListContainer">
+			<c:ConditionalPanel ui:field="scrollingPagerPanel">
+				<g:HTMLPanel>
+					<c:ShowMorePagerPanel addStyleNames='pagerPanel' ui:field='pagerPanel' />
+					<c:RangeLabelPager ui:field='rangeLabelPager' />
+				</g:HTMLPanel>
+			</c:ConditionalPanel>
+			<c:ConditionalPanel ui:field="noPagerPanel">
+				<g:HTMLPanel ui:field="noPagerCellListContainer" addStyleNames='pagerPanel'/>
+			</c:ConditionalPanel>
+			<c:ConditionalPanel ui:field="simplePagerPanel">
+				<g:HTMLPanel>
+					<g:ScrollPanel addStyleNames='pagerPanel' ui:field="simplePagerCellListContainer" />
+					<p:SimplePager ui:field='simplePager'/>
+				</g:HTMLPanel>
+			</c:ConditionalPanel>
+			<c:ConditionalPanel ui:field="tableDatePanel">
+				<g:HTMLPanel>
+					<g:ScrollPanel addStyleNames='pagerPanel' ui:field="tableDateContainer" />
+					<p:SimplePager ui:field='tableDatePager'/>
+				</g:HTMLPanel>
+			</c:ConditionalPanel>
+			
+        </g:HTMLPanel>
+        <c:ConditionalPanel ui:field="itemListControlsPanel">
+	        <g:HTMLPanel styleName="itemListControls">
+				<c:RaphaelButtonWidget ui:field="addItemListButton" icon="lists" label="add_item_list" modifier="add"/>
+				<c:RaphaelButtonWidget ui:field="deleteItemListButton" icon="lists" label="delete_item_list" modifier="remove"/>
+				<c:RaphaelButtonWidget ui:field="editItemListButton" icon="lists" label="edit_item_list" modifier="edit"/>
+			</g:HTMLPanel>
+		</c:ConditionalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

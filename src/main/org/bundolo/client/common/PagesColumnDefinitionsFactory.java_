@@ -1,0 +1,18 @@
+package org.bundolo.client.common;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.bundolo.shared.model.PageDTO;
+
+public class PagesColumnDefinitionsFactory<T> {
+  public static List<ColumnDefinition<PageDTO>> 
+      getPagesColumnDefinitions() {
+    return PagesColumnDefinitionsImpl.getInstance();
+  }
+
+  public static List<ColumnDefinition<PageDTO>>
+      getTestPagesColumnDefinitions() {
+    return new ArrayList<ColumnDefinition<PageDTO>>();
+  }
+}

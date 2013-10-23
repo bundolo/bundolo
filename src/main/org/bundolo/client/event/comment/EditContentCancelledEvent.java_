@@ -1,0 +1,17 @@
+package org.bundolo.client.event.content;
+
+import com.google.gwt.event.shared.GwtEvent;
+
+public class EditContentCancelledEvent extends GwtEvent<EditContentCancelledEventHandler>{
+  public static Type<EditContentCancelledEventHandler> TYPE = new Type<EditContentCancelledEventHandler>();
+  
+  @Override
+  public Type<EditContentCancelledEventHandler> getAssociatedType() {
+    return TYPE;
+  }
+
+  @Override
+  protected void dispatch(EditContentCancelledEventHandler handler) {
+    handler.onEditContentCancelled(this);
+  }
+}

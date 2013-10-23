@@ -1,0 +1,17 @@
+package org.bundolo.client.event.content;
+
+import com.google.gwt.event.shared.GwtEvent;
+
+public class ContentDeletedEvent extends GwtEvent<ContentDeletedEventHandler>{
+  public static Type<ContentDeletedEventHandler> TYPE = new Type<ContentDeletedEventHandler>();
+  
+  @Override
+  public Type<ContentDeletedEventHandler> getAssociatedType() {
+    return TYPE;
+  }
+
+  @Override
+  protected void dispatch(ContentDeletedEventHandler handler) {
+    handler.onContentDeleted(this);
+  }
+}

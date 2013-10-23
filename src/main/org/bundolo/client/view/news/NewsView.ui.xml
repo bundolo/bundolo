@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget">
+
+	<g:HTMLPanel>News News News News News News News News News News News News News News <br/>
+		<g:HTMLPanel ui:field="singleNewsContainer" styleName="singleNewsContainer"/>
+		<c:ConditionalPanel ui:field="newsControlsPanel">
+			<g:HTMLPanel styleName="newsControls" ui:field="newsControls">
+				<c:RaphaelButtonWidget ui:field="addNewsButton" icon="news" label="add_news" modifier="add"/>
+				<c:RaphaelButtonWidget ui:field="deleteNewsButton" icon="news" label="delete_news" modifier="remove"/>
+				<c:RaphaelButtonWidget ui:field="editNewsButton" icon="news" label="edit_news" modifier="edit"/>
+			</g:HTMLPanel>
+		</c:ConditionalPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder> 

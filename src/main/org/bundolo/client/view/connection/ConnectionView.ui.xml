@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget">
+
+	<g:HTMLPanel>Links Links Links Links Links Links Links Links Links Links Links <br/>
+		<g:HTMLPanel ui:field="connectionsContainer" styleName="connectionsContainer"/>
+		<g:HTMLPanel ui:field="connectionContainer" styleName="connectionContainer">
+			<g:Label ui:field="emailLabel"/><g:Label ui:field="email"/>
+			<g:Label ui:field="urlLabel"/><g:Label ui:field="url"/>
+		</g:HTMLPanel>
+		<g:HTMLPanel ui:field="connectionDescriptionContainer" styleName="connectionDescriptionContainer"/>
+		<c:ConditionalPanel ui:field="connectionControlsPanel">
+			<g:HTMLPanel styleName="connectionControls" ui:field="connectionControls">
+				<c:RaphaelButtonWidget ui:field="addConnectionButton" icon="connections" label="add_connection" modifier="add"/>
+				<c:RaphaelButtonWidget ui:field="deleteConnectionButton" icon="connections" label="delete_connection" modifier="remove"/>
+				<c:RaphaelButtonWidget ui:field="editConnectionButton" icon="connections" label="edit_connection" modifier="edit"/>
+			</g:HTMLPanel>
+		</c:ConditionalPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder> 

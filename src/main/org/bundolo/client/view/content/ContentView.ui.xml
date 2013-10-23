@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget">
+
+<g:HTMLPanel>
+	<g:HTMLPanel styleName="contentContainer" ui:field="contentContainer"/>
+	<g:DisclosurePanel styleName="contentPanel" ui:field="contentPanel">
+		<g:VerticalPanel styleName="pageContent" ui:field="pageContent">
+			<g:HTMLPanel styleName="rootContentControls" ui:field="contentControls">
+				<c:RaphaelButtonWidget ui:field="addCommentButton" icon="comment" label="add_comment" modifier="add"/>
+			</g:HTMLPanel>
+			<g:VerticalPanel styleName="commentContainer" ui:field="commentContainer"/>
+		</g:VerticalPanel>
+	</g:DisclosurePanel>
+</g:HTMLPanel>
+</ui:UiBinder> 

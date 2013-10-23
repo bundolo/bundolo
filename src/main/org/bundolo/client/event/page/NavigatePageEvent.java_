@@ -1,0 +1,26 @@
+package org.bundolo.client.event.page;
+
+import com.google.gwt.event.shared.GwtEvent;
+
+public class NavigatePageEvent extends GwtEvent<NavigatePageEventHandler> {
+	public static Type<NavigatePageEventHandler> TYPE = new Type<NavigatePageEventHandler>();
+	private final String pageUrl;
+
+	public NavigatePageEvent(String pageUrl) {
+		this.pageUrl = pageUrl;
+	}
+
+	public String getPageUrl() {
+		return pageUrl;
+	}
+
+	@Override
+	public Type<NavigatePageEventHandler> getAssociatedType() {
+		return TYPE;
+	}
+
+	@Override
+	protected void dispatch(NavigatePageEventHandler handler) {
+		handler.onNavigatePage(this);
+	}
+}

@@ -1,0 +1,44 @@
+package org.bundolo.client.common;
+
+//import com.google.gwt.user.client.ui.CheckBox;
+//import com.google.gwt.user.client.ui.Widget;
+import java.util.ArrayList;
+
+import org.bundolo.shared.model.PageDTO;
+
+@SuppressWarnings("serial")
+public class PagesColumnDefinitionsImpl extends 
+    ArrayList<ColumnDefinition<PageDTO>> {
+  
+  private static PagesColumnDefinitionsImpl instance = null;
+  
+  public static PagesColumnDefinitionsImpl getInstance() {
+    if (instance == null) {
+      instance = new PagesColumnDefinitionsImpl();
+    }
+    
+    return instance;
+  }
+  
+  protected PagesColumnDefinitionsImpl() {
+    this.add(new ColumnDefinition<PageDTO>() {
+      public void render(PageDTO pageDTO, StringBuilder sb) {
+        sb.append("<input type='checkbox'/>");
+      }
+
+      public boolean isSelectable() {
+        return true;
+      }
+    });
+
+    this.add(new ColumnDefinition<PageDTO>() {
+      public void render(PageDTO pageDTO, StringBuilder sb) {        
+        sb.append("<div id='" + pageDTO.getName() + "'>" + pageDTO.getName() + "</div>");
+      }
+
+      public boolean isClickable() {
+        return true;
+      }
+    });
+  }
+}

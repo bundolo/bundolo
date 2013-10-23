@@ -1,0 +1,8 @@
+/gwt-unitCache
+/.gwt
+/war/WEB-INF/classes
+/build
+/war/WEB-INF/deploy
+/war/Bundolo
+/war/WEB-INF/lib/bundolo.jar
+/bundolo.war

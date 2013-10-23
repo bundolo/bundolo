@@ -1,0 +1,36 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget">
+
+	<g:HTMLPanel>		
+      	<g:HTMLPanel>
+    		<g:Label ui:field="publicDataLabel"/><br/>
+    		<g:Label ui:field="displayNameLabel"/><g:Label ui:field="displayName"/><br/>
+    		<g:Label ui:field="signupDateLabel"/><g:Label ui:field="signupDate"/><br/>			
+    		<g:HTMLPanel ui:field="messageControls" styleName="messageControls">
+    			<c:RaphaelButtonWidget ui:field="addMessageButton" icon="message" label="add_message" modifier="add"/>
+    		</g:HTMLPanel>
+    	</g:HTMLPanel>
+    	<c:ConditionalPanel ui:field="personalPanel">
+			<g:HTMLPanel>
+				<g:Label ui:field="personalDataLabel"/>
+     			<g:Label ui:field="firstNameLabel"/><g:Label ui:field="firstName"/>
+     			<g:Label ui:field="lastNameLabel"/><g:Label ui:field="lastName"/>
+     			<g:Label ui:field="genderLabel"/><g:Label ui:field="gender"/>
+     			<g:Label ui:field="birthDateLabel"/><g:Label ui:field="birthDate"/>
+     			<!-- <g:Label ui:field="emailLabel"/><g:Label ui:field="email"/> -->
+     		</g:HTMLPanel>
+    	</c:ConditionalPanel>
+    	<c:ConditionalPanel ui:field="adminPanel">
+      		<g:HTMLPanel ui:field="userProfileControls" styleName="userProfileControls">
+				<c:RaphaelButtonWidget ui:field="deleteUserProfileButton" icon="user" label="delete_account" modifier="remove"/>
+				<c:RaphaelButtonWidget ui:field="editUserProfileButton" icon="user" label="edit_account" modifier="edit"/>
+      		</g:HTMLPanel>
+      	</c:ConditionalPanel>
+      	<g:HTMLPanel ui:field="descriptionContainer" styleName="descriptionContainer"/>
+      	<g:HTMLPanel>
+      		<g:Label ui:field="userTextsLabel"/>
+      		<g:HTMLPanel ui:field="userTextsContainer" styleName="userTextsContainer"/>
+      	</g:HTMLPanel>
+    </g:HTMLPanel>  	
+
+</ui:UiBinder> 

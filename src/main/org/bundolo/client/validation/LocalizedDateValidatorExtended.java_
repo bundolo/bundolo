@@ -1,0 +1,124 @@
+/*
+	Copyright 2009 Anatol Gregory Mayen
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License. 
+	You may obtain a copy of the License at 
+	
+	http://www.apache.org/licenses/LICENSE-2.0 
+	
+	Unless required by applicable law or agreed to in writing, software 
+	distributed under the License is distributed on an "AS IS" BASIS, 
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+	See the License for the specific language governing permissions and 
+	limitations under the License. 
+*/
+package org.bundolo.client.validation;
+
+import com.google.gwt.i18n.client.DateTimeFormat;
+import com.google.gwt.user.client.ui.TextBoxBase;
+import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.datepicker.client.DateBox;
+
+import eu.maydu.gwt.validation.client.ValidationAction;
+import eu.maydu.gwt.validation.client.ValidationResult;
+import eu.maydu.gwt.validation.client.Validator;
+import eu.maydu.gwt.validation.client.i18n.StandardValidationMessages;
+import eu.maydu.gwt.validation.client.i18n.ValidationMessages;
+
+/**
+ * 
+ * The LocalizedDateValidator will validate a given date after regional
+ * date syntax
+ * 
+ * @author Anatol Mayen
+ *
+ */
+public class LocalizedDateValidatorExtended extends Validator<LocalizedDateValidatorExtended> {
+
+//	private TextBoxBase text;
+//	private DateBox dateBox;
+	private Widget widget;
+	private DateTimeFormat formatter;
+	
+	public LocalizedDateValidatorExtended(Widget widget, DateTimeFormat formatter) {
+		this(widget, formatter, false, false);
+	}
+	
+	public LocalizedDateValidatorExtended(Widget widget, DateTimeFormat formatter, String customMsgKey) {
+		this(widget, formatter, false, false, customMsgKey);
+	}
+	
+	/**
+	 * Deprecated because of the use of the <code>allowNullInput</code> parameter that
+	 * is now generalized into the setRequired method of the <code>Validator</code>
+	 * interface.
+	 * 
+	 * @param text
+	 * @param formatter
+	 * @param allowNullInput
+	 */
+	public LocalizedDateValidatorExtended(Widget widget, DateTimeFormat formatter, boolean allowNullInput) {
+		this(widget, formatter, allowNullInput, false);
+		setRequired(!allowNullInput);
+	}
+	
+	
+	public LocalizedDateValidatorExtended(Widget widget, DateTimeFormat formatter, boolean allowNullInput, boolean preventsPropagationOfValidationChain) {
+		super();
+		this.setPreventsPropagationOfValidationChain(preventsPropagationOfValidationChain);
+		if(widget == null)
+			throw new IllegalArgumentException("The text box element must not be null");
+		if(formatter == null)
+			throw new IllegalArgumentException("DateTimeFormat must not be null");
+		this.widget = widget;
+		this.formatter = formatter;
+		setRequired(!allowNullInput);
+	}
+	
+	public LocalizedDateValidatorExtended(Widget widget, DateTimeFormat formatter, boolean allowNullInput, boolean preventsPropagationOfValidationChain, String customMsgKey) {
+		super();
+		this.setPreventsPropagationOfValidationChain(preventsPropagationOfValidationChain);
+		if(widget == null)
+			throw new IllegalArgumentException("The text box element must not be null");
+		if(formatter == null)
+			throw new IllegalArgumentException("DateTimeFormat must not be null");
+		this.widget = widget;
+		this.formatter = formatter;
+		setRequired(!allowNullInput);
+		this.setCustomMsgKey(customMsgKey);
+	}
+	
+
+	@Override
+	public ValidationResult validate(ValidationMessages allMessages) {
+		StandardValidationMessages messages = allMessages.getStandardMessages();
+		String str = "";
+		if (widget instanceof TextBoxBase) {
+			((TextBoxBase)widget).getText();		
+		} else if (widget instanceof DateBox) {
+			((DateBox)widget).getText();
+		}
+		if(!isRequired() && str.equals(""))
+			return null;
+		str = str.trim();
+		if(str.equals(""))
+			return new ValidationResult(getErrorMessage(allMessages, messages.noDateGiven()));
+		
+		
+		try {
+			formatter.parseStrict(str);
+		}catch(Exception ex) {
+			return new ValidationResult(getErrorMessage(allMessages, messages.unparsableDate()));
+		}
+		
+		return null;
+	}
+	
+	@Override
+	public void invokeActions(ValidationResult result) {
+		for(ValidationAction<Widget> action : getFailureActions())
+			action.invoke(result, widget);
+	}
+
+}

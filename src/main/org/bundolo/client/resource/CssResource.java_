@@ -1,0 +1,16 @@
+package org.bundolo.client.resource;
+
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.resources.client.ClientBundle;
+
+/**
+ * @author cb
+ * 
+ */
+public interface CssResource extends ClientBundle {
+    public static final CssResource INSTANCE =  GWT.create(CssResource.class);
+
+//    @Source("Bundolo.css")
+//    @com.google.gwt.resources.client.CssResource.NotStrict
+//    com.google.gwt.resources.client.CssResource communication_hub_css();
+}

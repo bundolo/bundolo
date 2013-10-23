@@ -1,0 +1,347 @@
+@import url(Bundolo/css/general.css);
+@import url(Bundolo/css/date_picker.css);
+@import url(Bundolo/css/decorated_popup_panel.css);
+@import url(Bundolo/css/stack_layout_panel.css);
+
+.page {
+	width:100%;
+	/*height:100%;*/
+	border-spacing:0;
+	border-collapse:collapse;
+}
+.pageHeader {
+	width:100%;
+	height:200px;
+}
+
+.footer {
+	height:32px;
+	text-align: center;
+}
+
+.navigation {
+	float: left;
+}
+
+.login {
+	float: right;
+}
+
+.login div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.login input,.login .gwt-Label {
+	font-size: 10px;
+}
+
+.login .usernameContainer, .login .passwordContainer, .login .emailContainer {
+	position:relative;	
+}
+
+.login .usernameContainer .gwt-Label, .login .passwordContainer .gwt-Label, .login .emailContainer .gwt-Label {
+	position:absolute;
+	top:4px;
+	left:4px;
+}
+
+.login .gwt-PushButton, .contextPanel .gwt-PushButton, .pageControls .gwt-PushButton {
+	height: 32px;
+	width: 32px;
+	border: 0 none;
+	background: #ffffff
+		url('Bundolo/gwt_images/button_background_empty_32.png') no-repeat left
+		top;
+	padding: 0;
+}
+
+.login .gwt-PushButton img {
+	margin: 8px 0 0 9px;	
+}
+
+.main {
+	width:100%;
+}
+
+.sidebar {
+	min-height: 700px;
+	height: auto !important;
+	height: 700px;
+	/*height: 100%;*/
+	width:100%;
+}
+
+.sidebar div {
+	overflow: hidden;
+	float: right;
+}
+
+.pageSpecific {
+	word-wrap: break-word;
+	padding: 10px;
+}
+
+.hoverBar {
+	width: 20px;
+	height: 700px;
+	/*height: 100%;*/
+	background-color: #cccccc;
+}
+
+.animatedArea {
+	height: 700px;
+	/*height: 100%;*/
+	width:100%;
+}
+
+.sidebarContent {
+	/*background-color: yellow;*/
+	height: 680px;
+	/*min-height: 580px;
+	height: auto !important;
+	height: 580px;*/
+	width: 100%;
+}
+
+.controlButton {
+	width: 100%;
+	height: 20px;
+}
+
+.controlButton .gwt-ToggleButton {
+	background-color: #aaaaaa;
+	padding:2px;
+}
+
+.page .gwt-Button {
+	font-size: 10px;
+}
+
+.mainPanel, .contextPanel {
+	min-height: 350px;
+	height: auto !important;
+	height: 350px;
+	padding: 10px;
+	width: 100%;
+}
+
+.contentContainer {
+	border: 1px dashed black;
+	min-height: 32px;
+	height: auto !important;
+	height: 32px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	/*float:left;
+	width:100%;*/
+}
+
+.roundButton>img, .contentControls .gwt-PushButton .gwt-Image,.itemListControls .gwt-PushButton .gwt-Image, .pageControls .gwt-PushButton .gwt-Image, .rootContentControls .gwt-PushButton .gwt-Image, .contestControls .gwt-PushButton .gwt-Image, .connectionControls .gwt-PushButton .gwt-Image, .forumControls .gwt-PushButton .gwt-Image, .newsControls .gwt-PushButton .gwt-Image, .serialControls .gwt-PushButton .gwt-Image, .episodeControls .gwt-PushButton .gwt-Image, .textControls .gwt-PushButton .gwt-Image, .userProfileControls .gwt-PushButton .gwt-Image, .messageControls .gwt-PushButton .gwt-Image {
+	height: 32px !important;
+	width: 32px !important;
+	background-position: 8px 8px !important;
+}
+
+.roundButton, .contentControls .gwt-PushButton, .itemListControls .gwt-PushButton, .pageControls .gwt-PushButton, .rootContentControls .gwt-PushButton, .contestControls .gwt-PushButton, .connectionControls .gwt-PushButton, .forumControls .gwt-PushButton, .newsControls .gwt-PushButton, .serialControls .gwt-PushButton, .episodeControls .gwt-PushButton, .textControls .gwt-PushButton, .userProfileControls .gwt-PushButton, .messageControls .gwt-PushButton {
+	height: 32px;
+	width: 32px;
+	border: none;
+	padding: 0;
+	background: #ffffff
+		url('Bundolo/gwt_images/button_background_empty_32.png') no-repeat left
+		top;
+	float:right;
+}
+
+.contentControls {
+	float:right;
+	width:96px;
+}
+
+.rootContentControls {
+	float:right;
+	width:32px;
+}
+
+.pageContent, .contentContent, .commentContainer, .contentEntry {
+	width:100%;
+	/*background-color: white;*/
+}
+
+.contentText {
+	min-height: 32px;
+	height: auto !important;
+	height: 32px;
+	/*background-color: white;*/
+	word-wrap: break-word;
+	/*float:left;
+	width:100%;*/
+	/*position:relative*/
+}
+
+.contentText p {
+	padding:0;
+	margin:0;
+}
+
+.itemListContainer .gwt-Anchor {
+	color: #000000;
+	display: block;
+}
+
+.itemListContainer {
+	min-height: 32px;
+	height: auto !important;
+	height: 32px;
+}
+
+.mainPanel .pageSpecificList .itemListContainer {
+	width: 400px;
+}
+
+.newTextsContainer {
+	width: 400px;
+}
+
+.contextPanel .gwt-PushButton {
+	float:left;
+}
+
+.itemListControls, .pageControls, .contestControls, .connectionControls, .forumControls, .newsControls, .serialControls, .episodeControls, .textControls, .userProfileControls, .messageControls {
+	height:32px;
+}
+
+.contentPanel {
+	width: 100%;
+}
+
+.horizontalPanel {
+	float:left;
+	width:100%;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.sidebarCell, .mainCell {
+	vertical-align: top;
+}
+
+.mainCell>div {
+	border-top:20px solid #000;
+	border-left:0;
+	border-right:10px solid #000;
+	border-bottom:20px solid #000;	
+	background: #000;
+}
+
+.mainCell>div, .mainCell>div>div {
+	border-top-left-radius:0;
+	border-top-right-radius:20px;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:20px;
+}
+
+.mainCell>div>div {
+	border-top:10px solid #fff;
+	border-left:0;
+	border-bottom:10px solid #fff;
+	border-right:10px solid #fff;
+	background: #fff;
+}
+
+.sidebarCell>div {
+	border-top:20px solid #000;
+	border-bottom:20px solid #000;
+	border-right:0;
+	border-left:10px solid #000;
+	background: #000;
+}
+
+.sidebarCell>div, .sidebarCell>div>div {	
+	border-top-left-radius:20px;
+	border-top-right-radius:0;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:0;
+}
+
+.sidebarCell>div>div {
+	/*border-top:0;
+	border-left:0;
+	border-bottom:15px solid #fff;
+	border-right:0;*/
+	background: #fff;
+	width:100%;
+}
+
+.sidebarContent .itemListContainer div {
+	float:none;
+}
+
+.pageSpecificList .itemListContainer .pagerPanel {
+	/*height: 200px;*/
+	border: 1px solid #cccccc;
+    text-align: left;
+}
+
+.forumTopicsContainer .itemListContainer .pagerPanel {
+	/*height: 200px;*/
+	border: 1px solid #cccccc;
+    text-align: left;
+}
+
+.forumPostsContainer .itemListContainer .pagerPanel {
+	/*height: 500px;*/
+	border: 1px solid #cccccc;
+    text-align: left;
+}
+
+.sidebar .itemListContainer .pagerPanel {
+	/*height: 380px;*/
+	width: 276px;
+	border: 1px solid #cccccc;
+	text-align: left;
+}
+
+.itemListControls {
+	display:none;
+}
+
+.sidebar .gwt-StackLayoutPanelContent>div {
+	float:left;
+}
+
+.pageDataPanel legend {
+	font-size:20px;
+}
+
+.pageData {
+	width:100%;
+}
+
+.pageData>tbody>tr>td {
+	width:100%;
+}
+
+.mainPanel fieldset {
+	border-color: #000000;
+	border-style: solid;
+}
+
+.contentContent {
+	border-top: 1px dashed #aaaaaa;
+	border-left: 1px dashed #aaaaaa;
+	padding-left:20px;
+}
+
+.pageContent .content {
+	border-bottom: 1px dashed #aaaaaa;
+	border-right: 1px dashed #aaaaaa;
+}
+
+.validationFailedBorder {
+	border: 1px solid #ff0000;
+}

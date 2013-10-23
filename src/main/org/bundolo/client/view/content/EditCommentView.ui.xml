@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget"
+xmlns:ck="urn:import:com.axeiya.gwtckeditor.client">
+
+	<g:HTMLPanel>
+		<g:Label ui:field="textLabel"/><ck:CKEditor ui:field="text"></ck:CKEditor>
+		<c:RaphaelButtonWidget ui:field="saveCommentButton" icon="comment" label="save" modifier="confirm"/>
+		<c:RaphaelButtonWidget ui:field="cancelCommentButton" icon="comment" label="cancel" modifier="cancel"/>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

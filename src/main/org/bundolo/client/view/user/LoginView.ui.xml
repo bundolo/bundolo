@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget">
+
+	<g:HTMLPanel>
+		<g:HTMLPanel styleName="currentUser"><g:Label ui:field="currentUserMessage"/></g:HTMLPanel>			
+		<c:ConditionalPanel ui:field="loginPanel">
+			<g:HTMLPanel>
+				<c:RaphaelButtonWidget ui:field="registerButton" icon="user" label="register" modifier="add"/>
+				<g:HTMLPanel styleName="usernameContainer"><g:Label ui:field="usernameLabel"/><g:TextBox ui:field="username"/></g:HTMLPanel>
+				<g:HTMLPanel styleName="passwordContainer"><g:Label ui:field="passwordLabel"/><g:PasswordTextBox ui:field="password"/></g:HTMLPanel>
+				<g:CheckBox ui:field="rememberMe"/>
+				<c:RaphaelButtonWidget ui:field="loginButton" icon="login" label="login" modifier=""/>
+				<!-- <g:PushButton ui:field="loginWithFacebookButton"/> -->
+				<c:RaphaelButtonWidget ui:field="generatePasswordButton" icon="user" label="forgot_password" modifier="info"/>
+			</g:HTMLPanel>
+		</c:ConditionalPanel>
+		<c:ConditionalPanel ui:field="logoutPanel">
+			<g:HTMLPanel>
+				<c:RaphaelButtonWidget ui:field="userProfileButton" icon="user" label="profile" modifier=""/>
+				<c:RaphaelButtonWidget ui:field="logoutButton" icon="logout" label="logout" modifier=""/>
+			</g:HTMLPanel>
+		</c:ConditionalPanel>
+		<c:ConditionalPanel ui:field="generatePasswordPanel">
+			<g:HTMLPanel>
+				<g:HTMLPanel styleName="emailContainer"><g:Label ui:field="emailLabel"/><g:TextBox ui:field="email"/></g:HTMLPanel>
+				<c:RaphaelButtonWidget ui:field="sendPasswordButton" icon="user" label="send_password" modifier="confirm"/>
+				<c:RaphaelButtonWidget ui:field="sendPasswordCancelButton" icon="user" label="cancel" modifier="cancel"/>
+			</g:HTMLPanel>
+		</c:ConditionalPanel>
+    </g:HTMLPanel>  	
+
+</ui:UiBinder>

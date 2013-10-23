@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget"
+xmlns:dp="urn:import:com.google.gwt.user.datepicker.client" xmlns:ck="urn:import:com.axeiya.gwtckeditor.client">
+
+	<g:HTMLPanel>
+		<br/><g:Label ui:field="publicDataLabel"/><br/>
+		<g:Label ui:field="displayNameLabel"/><g:TextBox ui:field="username"/><br/>
+		<g:Label ui:field="descriptionLabel"/><ck:CKEditor ui:field="description"></ck:CKEditor>
+		<g:Label ui:field="avatarLabel"/><g:TextBox ui:field="avatarUrl"/><br/>
+		<br/><g:Label ui:field="personalDataLabel"/><br/>
+		<g:Label ui:field="firstNameLabel"/><g:TextBox ui:field="firstName"/><br/>
+		<g:Label ui:field="lastNameLabel"/><g:TextBox ui:field="lastName"/><br/>
+		<g:Label ui:field="genderLabel"/><g:ListBox ui:field="gender"/><br/>
+		<g:Label ui:field="birthDateLabel"/><dp:DateBox ui:field="birthDate"/><br/>
+		<g:Label ui:field="showPersonalLabel"/><g:CheckBox ui:field="showPersonal"/><br/>
+		<br/><g:Label ui:field="passwordInstructionsLabel"/><br/>
+		<g:Label ui:field="currentPasswordLabel"/><g:PasswordTextBox ui:field="currentPassword"/><br/>
+		<g:Label ui:field="newPasswordLabel"/><g:PasswordTextBox ui:field="newPassword"/><br/>
+		<g:Label ui:field="retypePasswordLabel"/><g:PasswordTextBox ui:field="retypePassword"/><br/>
+		<br/><g:Label ui:field="emailInstructionsLabel"/><br/>
+		<g:Label ui:field="newEmailLabel"/><g:TextBox ui:field="newEmail"/><br/>
+		<g:Label ui:field="retypeEmailLabel"/><g:TextBox ui:field="retypeEmail"/><br/>
+		<br/>
+		<c:RaphaelButtonWidget ui:field="saveUserProfileButton" icon="" label="save_changes" modifier="confirm"/>
+		<c:RaphaelButtonWidget ui:field="cancelUserProfileButton" icon="user" label="cancel" modifier="cancel"/>
+	</g:HTMLPanel>
+ 
+</ui:UiBinder>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget">
+
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="forumTopicsContainer" styleName="forumTopicsContainer"/>
+		<g:HTMLPanel ui:field="forumPostsContainer" styleName="forumPostsContainer"/>
+		<g:HTMLPanel styleName="forumControls" ui:field="forumControls">
+			<c:RaphaelButtonWidget ui:field="addForumPostButton" icon="forum" label="add_forum_post" modifier="add"/>
+			<c:RaphaelButtonWidget ui:field="deleteForumPostButton" icon="forum" label="delete_forum_post" modifier="remove"/>
+			<c:RaphaelButtonWidget ui:field="editForumPostButton" icon="forum" label="edit_forum_post" modifier="edit"/>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder> 

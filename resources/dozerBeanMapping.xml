@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://dozer.sourceforge.net
+http://dozer.sourceforge.net/schema/beanmapping.xsd">
+  
+  <mapping> 
+    <class-a>org.bundolo.server.model.Page</class-a>
+    <class-b>org.bundolo.shared.model.PageDTO</class-b>   
+  </mapping>  
+
+  <mapping> 
+    <class-a>org.bundolo.server.model.Content</class-a>
+    <class-b>org.bundolo.shared.model.ContentDTO</class-b>   
+  </mapping>
+  
+  <mapping> 
+    <class-a>org.bundolo.server.model.UserProfile</class-a>
+    <class-b>org.bundolo.shared.model.UserProfileDTO</class-b>   
+  </mapping>
+  
+  <mapping>
+  	<class-a>org.bundolo.server.model.UserProfile</class-a>
+  	<class-b>org.bundolo.shared.model.UserDTO</class-b>
+  </mapping>
+  
+  <mapping>
+  	<class-a>org.bundolo.shared.model.UserProfileDTO</class-a>
+  	<class-b>org.bundolo.shared.model.UserDTO</class-b>
+  </mapping>
+  
+  <mapping> 
+    <class-a>org.bundolo.server.model.ItemList</class-a>
+    <class-b>org.bundolo.shared.model.ItemListDTO</class-b>   
+  </mapping>
+  
+  <mapping> 
+    <class-a>org.bundolo.server.model.Contest</class-a>
+    <class-b>org.bundolo.shared.model.ContestDTO</class-b>   
+  </mapping>
+  
+  <mapping> 
+    <class-a>org.bundolo.server.model.Connection</class-a>
+    <class-b>org.bundolo.shared.model.ConnectionDTO</class-b>   
+  </mapping>
+  
+  <mapping> 
+    <class-a>org.bundolo.server.model.Rating</class-a>
+    <class-b>org.bundolo.shared.model.RatingDTO</class-b>   
+  </mapping>
+  
+</mappings>

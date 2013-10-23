@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+	</listener>
+
+	<!-- Servlets -->
+
+	<servlet>
+		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
+		<servlet-class>org.spring4gwt.server.SpringGwtRemoteServiceServlet
+	</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
+		<url-pattern>/Bundolo/bundoloServices/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>  
+  		<servlet-name>remoteLogging</servlet-name>  
+  		<servlet-class>com.google.gwt.logging.server.RemoteLoggingServiceImpl</servlet-class>  
+	</servlet>  
+	<servlet-mapping>  
+  		<servlet-name>remoteLogging</servlet-name>  
+  		<url-pattern>/Bundolo/remote_logging</url-pattern>  
+	</servlet-mapping> 
+	
+	<filter>
+  		<filter-name>springRequestFilter</filter-name>
+  		<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+	</filter>
+	<filter-mapping>
+  		<filter-name>springRequestFilter</filter-name>
+  		<url-pattern>/Bundolo/bundoloServices/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Bundolo.html</welcome-file>
+	</welcome-file-list>
+	
+	<!--  session timeout in minutes -->
+	<session-config>
+    	<session-timeout>15</session-timeout>
+	</session-config>
+	
+
+</web-app>

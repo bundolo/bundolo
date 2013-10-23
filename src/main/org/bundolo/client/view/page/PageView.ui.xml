@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget" xmlns:generic="urn:import:org.apache.bcel.generic">
+	<g:VerticalPanel styleName="page" ui:field="page">
+	<g:HTMLPanel>
+		<g:HorizontalPanel styleName="pageHeader">
+        <!-- <g:HTMLPanel styleName="pageHeader" ui:field="pageHeader"> -->
+            <g:HTMLPanel styleName="navigation" ui:field="navigation"/>
+            <g:VerticalPanel>
+            	<g:HTMLPanel styleName="login" ui:field="login"/>
+				<g:HTMLPanel styleName="illustration" ui:field="illustration"/>
+            </g:VerticalPanel>
+        </g:HorizontalPanel>
+        <g:HTMLPanel>
+        <table class="horizontalPanel" cellspacing="0" cellpadding="0">
+        	<tr>
+        		<td class="mainCell">
+	        		<g:HTMLPanel>
+			        	<c:ConditionalPanel ui:field="mainPanel">		        		
+							<g:VerticalPanel styleName="mainPanel">
+								<g:HTMLPanel styleName="pageSpecific" ui:field="pageSpecific"/>
+								<g:CaptionPanel styleName="pageDataPanel" ui:field="pageDataPanel">
+								<g:HorizontalPanel styleName="pageData">
+								<g:HTMLPanel styleName="pageContent" ui:field="pageContent"/>
+								<g:HTMLPanel styleName="pageSpecificList" ui:field="pageSpecificList"/>
+								</g:HorizontalPanel>
+									<!-- <table class="horizontalPanel" cellspacing="0" cellpadding="0">
+										<tr>
+											<td>
+												<g:HTMLPanel styleName="pageContent" ui:field="pageContent"/>
+											</td>
+											<td>
+												<g:HTMLPanel styleName="pageSpecificList" ui:field="pageSpecificList"/>
+											</td>
+										</tr>
+									</table> -->
+								</g:CaptionPanel>
+								<c:ConditionalPanel ui:field="pageControlsPanel">
+									<g:HTMLPanel styleName="pageControls" ui:field="pageControls">
+										<c:RaphaelButtonWidget ui:field="addPageButton" icon="page" label="add_page" modifier="add"/>
+										<c:RaphaelButtonWidget ui:field="deletePageButton" icon="page" label="delete_page" modifier="remove"/>
+										<c:RaphaelButtonWidget ui:field="editPageButton" icon="page" label="edit_page" modifier="edit"/>
+									</g:HTMLPanel>
+								</c:ConditionalPanel>
+							</g:VerticalPanel>
+						</c:ConditionalPanel>
+						<c:ConditionalPanel ui:field="contextPanel">
+							<g:HTMLPanel ui:field="context" styleName="contextPanel"/>
+						</c:ConditionalPanel>
+					</g:HTMLPanel>
+				</td>
+				<td id="sidebarCell" class="sidebarCell">
+					
+		            <g:HTMLPanel styleName="sidebar" ui:field="sidebar">
+		            <g:HTMLPanel>
+						<g:HTMLPanel styleName="hoverBar" ui:field="hoverBar"/>
+						<g:HTMLPanel styleName="animatedArea" ui:field="animatedArea">
+							<g:HTMLPanel styleName="controlButton">
+								<g:ToggleButton ui:field="controlButton"/>
+							</g:HTMLPanel>
+							<g:HTMLPanel styleName="sidebarContent" ui:field="sidebarContent"/>
+						</g:HTMLPanel>
+					</g:HTMLPanel>
+					</g:HTMLPanel>
+				</td>
+			</tr>
+        </table>
+        </g:HTMLPanel>
+        <g:HTMLPanel styleName="footer">
+        	<c:ImageAnchor ui:field="footerEmailAddress" addStyleNames="roundButton"/>
+        	<c:ImageAnchor ui:field="footerFacebookProfile" addStyleNames="roundButton"/>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+    </g:VerticalPanel>
+</ui:UiBinder> 

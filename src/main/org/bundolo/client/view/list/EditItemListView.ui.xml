@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget"
+xmlns:ck="urn:import:com.axeiya.gwtckeditor.client">
+
+	<g:HTMLPanel>
+		<g:Label ui:field="nameLabel"/><g:TextBox ui:field="name"></g:TextBox>
+		<g:Label ui:field="queryLabel"/><g:TextArea ui:field="query"></g:TextArea>
+		<g:Label ui:field="kindLabel"/><g:ListBox ui:field="kind"></g:ListBox>
+		<g:Label ui:field="statusLabel"/><g:ListBox ui:field="itemListStatus"></g:ListBox>
+		<c:RaphaelButtonWidget ui:field="saveItemListButton" icon="lists" label="save" modifier="confirm"/>
+		<c:RaphaelButtonWidget ui:field="cancelItemListButton" icon="lists" label="cancel" modifier="cancel"/>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

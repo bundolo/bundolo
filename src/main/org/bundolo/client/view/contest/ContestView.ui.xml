@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:org.bundolo.client.widget">
+
+	<g:HTMLPanel>Contests Contests Contests Contests Contests Contests Contests Contests Contests Contests Contests <br/>
+		<g:HTMLPanel ui:field="contestContainer" styleName="contestContainer">
+			<g:Label ui:field="expirationDateLabel"/><g:Label ui:field="expirationDate"/>
+		</g:HTMLPanel>
+		<g:HTMLPanel ui:field="contestDescriptionContainer" styleName="contestDescriptionContainer"/>
+		<c:ConditionalPanel ui:field="contestControlsPanel">
+			<g:HTMLPanel styleName="contestControls">
+				<c:RaphaelButtonWidget ui:field="addContestButton" icon="contests" label="add_contest" modifier="add"/>
+				<c:RaphaelButtonWidget ui:field="deleteContestButton" icon="contests" label="delete_contest" modifier="remove"/>
+				<c:RaphaelButtonWidget ui:field="editContestButton" icon="contests" label="edit_contest" modifier="edit"/>
+			</g:HTMLPanel>
+		</c:ConditionalPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder> 
