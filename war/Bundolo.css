@@ -51,7 +51,7 @@
 	width: 32px;
 	border: 0 none;
 	background: #ffffff
-		url('Bundolo/gwt_images/button_background_empty_32.png') no-repeat left
+		url('gwt_images/button_background_empty_32.png') no-repeat left
 		top;
 	padding: 0;
 }
@@ -151,7 +151,7 @@
 	border: none;
 	padding: 0;
 	background: #ffffff
-		url('Bundolo/gwt_images/button_background_empty_32.png') no-repeat left
+		url('gwt_images/button_background_empty_32.png') no-repeat left
 		top;
 	float:right;
 }

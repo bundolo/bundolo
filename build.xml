@@ -71,12 +71,11 @@
 				<!--<exclude name="META-INF/**" />-->
 			</fileset>
 		</copy>
-		<copy todir="${build.bundolo.dir}" preservelastmodified="true">
+		<!--<copy todir="${build.bundolo.dir}" preservelastmodified="true">
 			<fileset dir="${server.resources.dir}">
-				<!--<include name="images/**/*"/>-->
 				<include name="gwt_images/**/*"/>
 			</fileset>
-		</copy>
+		</copy>-->
 	</target>
 	<target name="war" depends="clean, gwt-compile, jar, copy-resources">
 		<war basedir="war" destfile="${war.name}" webxml="war/WEB-INF/web.xml">
@@ -89,7 +88,7 @@
 				<exclude name="**/gwt-user.jar" />
 				<exclude name="classes/org/**" />
 				<!--<exclude name="classes/images/**" />-->
-				<exclude name="classes/gwt_images/**" />
+				<!--<exclude name="classes/gwt_images/**" />-->
 				<!--<exclude name="classes/META-INF/**" />-->
 				<!--<exclude name="classes/META-INF/**" />-->
 				<exclude name="deploy/**" />
