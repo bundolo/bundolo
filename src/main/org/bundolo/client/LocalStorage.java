@@ -43,7 +43,6 @@ import org.bundolo.client.presenter.TextPresenter;
 import org.bundolo.client.presenter.UserProfilePresenter;
 import org.bundolo.client.raphael.Navigation;
 import org.bundolo.client.resource.CustomValidationMessages;
-import org.bundolo.client.resource.IconResource;
 import org.bundolo.client.resource.MessageResource;
 import org.bundolo.client.resource.StandardValidationMessagesImpl;
 import org.bundolo.client.view.connection.ConnectionView;
@@ -159,7 +158,7 @@ public class LocalStorage {
 
     private static Map<PresenterName, Presenter> presenters = new EnumMap<PresenterName, Presenter>(PresenterName.class);
     private static MessageResource messageResource = null;
-    private static IconResource iconResource;
+    // private static IconResource iconResource;
     private static List<Object> navigationPages;
     private static Map<ItemListNameType, ItemListDTO> itemLists = new EnumMap<ItemListNameType, ItemListDTO>(
 	    ItemListNameType.class);
@@ -176,7 +175,7 @@ public class LocalStorage {
 	messageResource = new MessageResource();
 	StandardValidationMessages standardValidationMessages = GWT.create(StandardValidationMessagesImpl.class);
 	validationMessages = new CustomValidationMessages(standardValidationMessages);
-	iconResource = GWT.create(IconResource.class);
+	// iconResource = GWT.create(IconResource.class);
 	notificationPopup = new NotificationPopup(eventBus);
 	// refreshNavigationPages();
     }
@@ -208,9 +207,9 @@ public class LocalStorage {
 	return navigationPages;
     }
 
-    public IconResource getIconResource() {
-	return iconResource;
-    }
+    // public IconResource getIconResource() {
+    // return iconResource;
+    // }
 
     public Presenter getPresenter(String name) {
 	logger.log(Level.FINE, "getPresenter: " + name);

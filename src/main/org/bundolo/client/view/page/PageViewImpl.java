@@ -153,10 +153,13 @@ public class PageViewImpl extends Composite implements PageView {
 	initWidget(uiBinder.createAndBindUi(this));
 	footerEmailAddress.setHref("malto:" + Constants.BUNDOLO_EMAIL_ADDRESS);
 	// footerEmailAddress.setTarget("_blank");
-	footerEmailAddress.setResource(LocalStorage.getInstance().getIconResource().messagePlus());
+
+	// TODO set email icon using raphael
+	// footerEmailAddress.setResource(LocalStorage.getInstance().getIconResource().messagePlus());
 	footerFacebookProfile.setHref(Constants.BUNDOLO_FACEBOOK);
 	footerFacebookProfile.setTarget("_blank");
-	footerFacebookProfile.setResource(LocalStorage.getInstance().getIconResource().facebook());
+	// TODO set facebook icon using raphael
+	// footerFacebookProfile.setResource(LocalStorage.getInstance().getIconResource().facebook());
 
 	// NodeList<Element> tdElements =
 	// middle.getElement().getElementsByTagName("td");

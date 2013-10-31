@@ -88,7 +88,7 @@
 				<exclude name="**/gwt-dev.jar" />
 				<exclude name="**/gwt-user.jar" />
 				<exclude name="classes/org/**" />
-				<exclude name="classes/images/**" />
+				<!--<exclude name="classes/images/**" />-->
 				<exclude name="classes/gwt_images/**" />
 				<!--<exclude name="classes/META-INF/**" />-->
 				<!--<exclude name="classes/META-INF/**" />-->
