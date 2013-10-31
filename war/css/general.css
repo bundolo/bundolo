@@ -1,0 +1,13 @@
+html, body {
+    height:100%;
+    background-color: #ffffff;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-weight:normal;  
+	border-spacing:0 !important;
+	border-collapse:collapse !important;
+}

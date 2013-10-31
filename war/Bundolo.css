@@ -1,7 +1,7 @@
-@import url(Bundolo/css/general.css);
-@import url(Bundolo/css/date_picker.css);
-@import url(Bundolo/css/decorated_popup_panel.css);
-@import url(Bundolo/css/stack_layout_panel.css);
+@import url(css/general.css);
+@import url(css/date_picker.css);
+@import url(css/decorated_popup_panel.css);
+@import url(css/stack_layout_panel.css);
 
 .page {
 	width:100%;
