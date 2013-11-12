@@ -30,10 +30,4 @@ public class Constants {
     // TODO to be removed once db is updated
     public static final String OLD_DB_GUEST_USERNAME = "gost";
 
-    // mailing related //TODO move to properties file
-    public static final String FROM = "";
-    public static final String SMTP_HOST = "";
-    public static final String PORT = "";
-    public static final String LOGIN = "";
-    public static final String PASSWORD = "";
 }

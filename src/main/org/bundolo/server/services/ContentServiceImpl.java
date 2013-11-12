@@ -266,7 +266,6 @@ public class ContentServiceImpl implements ContentService, ApplicationContextAwa
     @Override
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
     public void saveLabels(Map<String, String> localeLabels) throws Exception {
-	// TODO df
 	for (String labelName : localeLabels.keySet()) {
 	    Content content = contentDAO.findContentForLocale(labelName, ContentKindType.label,
 		    SessionUtils.getUserLocale());
