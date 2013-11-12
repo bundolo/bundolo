@@ -6,3 +6,5 @@
 /war/Bundolo
 /war/WEB-INF/lib/bundolo.jar
 /bundolo.war
+/resources/dev.properties
+/resources/prod.properties
