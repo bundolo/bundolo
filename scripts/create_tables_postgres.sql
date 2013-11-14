@@ -448,6 +448,9 @@ INSERT INTO content VALUES (nextval('content_id_seq'), null, null, 'label', 'Ano
 INSERT INTO content VALUES (nextval('content_id_seq'), null, null, 'label', 'Username not allowed validation message', 'Username not allowed', 'en', '2012-09-29', 'active');
 INSERT INTO content VALUES (nextval('content_id_seq'), null, null, 'label', 'Labels saving failed status message', 'Labels saving failed', 'en', '2013-11-06', 'active');
 INSERT INTO content VALUES (nextval('content_id_seq'), null, null, 'label', 'Labels saved status message', 'Labels saved', 'en', '2013-11-06', 'active');
+INSERT INTO content VALUES (nextval('content_id_seq'), null, null, 'label', 'User not found validation message', 'User not found', 'en', '2013-11-14', 'active');
+INSERT INTO content VALUES (nextval('content_id_seq'), null, null, 'label', 'Password sending failed status message', 'Password sending failed', 'en', '2013-11-14', 'active');
+INSERT INTO content VALUES (nextval('content_id_seq'), null, null, 'label', 'Password sent status message', 'Password sent', 'en', '2013-11-14', 'active');
 --
 
 

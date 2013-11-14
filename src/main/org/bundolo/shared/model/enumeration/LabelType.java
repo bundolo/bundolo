@@ -115,7 +115,8 @@ public enum LabelType {
 	    "Delete serial confirmation message"), episode_delete_confirm("Delete episode confirmation message"), author_texts(
 	    "Author texts label"), anonymous_user("Anonymous user label"), validator_username_forbidden(
 	    "Username not allowed validation message"), labels_saving_failed("Labels saving failed status message"), labels_saved(
-	    "Labels saved status message"), ;
+	    "Labels saved status message"), user_not_found("User not found validation message"), password_sending_failed(
+	    "Password sending failed status message"), password_sent("Password sent status message"), ;
 
     private final String labelName;
 

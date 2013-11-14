@@ -30,7 +30,7 @@ public class MailingUtils {
 
     public void sendEmail(String body, String subject, String recipient) throws MessagingException,
 	    UnsupportedEncodingException {
-	logger.log(Constants.SERVER_DEBUG_LOG_LEVEL, "sendEmail\nrecipient: " + recipient + "\nsubject: " + subject
+	logger.log(Constants.SERVER_WARN_LOG_LEVEL, "sendEmail\nrecipient: " + recipient + "\nsubject: " + subject
 		+ "\nbody: " + body);
 	if (Boolean.valueOf(properties.getProperty("mail.from"))) {
 	    Properties mailProps = new Properties();
