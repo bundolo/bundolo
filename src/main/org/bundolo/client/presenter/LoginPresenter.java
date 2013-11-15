@@ -27,7 +27,8 @@ import eu.maydu.gwt.validation.client.ValidationProcessor;
 
 public class LoginPresenter implements Presenter, LoginView.Presenter {
 
-    private static final Logger logger = Logger.getLogger(LoginPresenter.class.getName());
+    private static final Logger logger = Logger.getLogger(LoginPresenter.class
+	    .getName());
 
     private UserDTO userDTO;
     private final UserProfileServiceAsync userProfileService;
@@ -35,11 +36,13 @@ public class LoginPresenter implements Presenter, LoginView.Presenter {
     private final LoginView view;
     private final ValidationProcessor validator;
 
-    public LoginPresenter(UserProfileServiceAsync userProfileService, HandlerManager eventBus, LoginView view) {
+    public LoginPresenter(UserProfileServiceAsync userProfileService,
+	    HandlerManager eventBus, LoginView view) {
 	this.userProfileService = userProfileService;
 	this.eventBus = eventBus;
 	this.view = view;
-	validator = new DefaultValidationProcessor(LocalStorage.getInstance().getValidationMessages());
+	validator = new DefaultValidationProcessor(LocalStorage.getInstance()
+		.getValidationMessages());
 	this.view.setPresenter(this);
 	bind();
     }
@@ -82,8 +85,8 @@ public class LoginPresenter implements Presenter, LoginView.Presenter {
 
     @Override
     public void onUserProfileButtonClicked() {
-	UserProfilePresenter userPresenter = (UserProfilePresenter) LocalStorage.getInstance().getPresenter(
-		PresenterName.user.name());
+	UserProfilePresenter userPresenter = (UserProfilePresenter) LocalStorage
+		.getInstance().getPresenter(PresenterName.user.name());
 	userPresenter.setUserDTO(userDTO);
 	Utils.setHistoryTokenIfNeeded(PresenterName.user);
     }
@@ -95,24 +98,31 @@ public class LoginPresenter implements Presenter, LoginView.Presenter {
 
     private void doLogin() {
 	logger.log(Level.FINE, "doLogin start");
-	userProfileService.login(view.getUsername(), view.getPassword(), view.getRememberMe(),
-		new AsyncCallback<UserDTO>() {
+	userProfileService.login(view.getUsername(), view.getPassword(),
+		view.getRememberMe(), new AsyncCallback<UserDTO>() {
 		    @Override
 		    public void onFailure(Throwable caught) {
-			logger.log(Level.SEVERE, "Error authenticating user: ", caught);
-			eventBus.fireEvent(new DisplayNotificationEvent(LocalStorage.getInstance().getMessageResource()
-				.getLabel(LabelType.login_failed)));
+			logger.log(Level.SEVERE, "Error authenticating user: ",
+				caught);
+			eventBus.fireEvent(new DisplayNotificationEvent(
+				LocalStorage.getInstance().getMessageResource()
+					.getLabel(LabelType.login_failed)));
 		    }
 
 		    @Override
 		    public void onSuccess(UserDTO result) {
-			logger.log(Level.FINE, "login user onSuccess: " + result);
+			logger.log(Level.FINE, "login user onSuccess: "
+				+ result);
 			if (result != null) {
-			    logger.log(Level.FINE, "sessionId: " + result.getSessionId());
-			    Cookies.setCookie(Constants.SESSION_ID_COOKIE_NAME, result.getSessionId(),
+			    logger.log(Level.FINE,
+				    "sessionId: " + result.getSessionId());
+			    Cookies.setCookie(Constants.SESSION_ID_COOKIE_NAME,
+				    result.getSessionId(),
 				    Utils.addMinutes(new Date(), 15));
 			    if (view.getRememberMe()) {
-				Cookies.setCookie(Constants.REMEMBER_ME_COOKIE_NAME, result.getRememberMeCookie(),
+				Cookies.setCookie(
+					Constants.REMEMBER_ME_COOKIE_NAME,
+					result.getRememberMeCookie(),
 					Utils.addDays(new Date(), 14));
 			    }
 			    userDTO = result;
@@ -120,8 +130,10 @@ public class LoginPresenter implements Presenter, LoginView.Presenter {
 			    eventBus.fireEvent(new UserAccessRightsUpdatedEvent());
 			    // TODO start session timeout timer here
 			} else {
-			    eventBus.fireEvent(new DisplayNotificationEvent(LocalStorage.getInstance()
-				    .getMessageResource().getLabel(LabelType.login_failed)));
+			    eventBus.fireEvent(new DisplayNotificationEvent(
+				    LocalStorage.getInstance()
+					    .getMessageResource()
+					    .getLabel(LabelType.login_failed)));
 			}
 			// TODO set cookie, use permanent
 			// this is plain cookie: String msg =
@@ -136,7 +148,8 @@ public class LoginPresenter implements Presenter, LoginView.Presenter {
 	    @Override
 	    public void onFailure(Throwable caught) {
 		logger.log(Level.SEVERE, "Error logging out user: ", caught);
-		eventBus.fireEvent(new DisplayNotificationEvent(LocalStorage.getInstance().getMessageResource()
+		eventBus.fireEvent(new DisplayNotificationEvent(LocalStorage
+			.getInstance().getMessageResource()
 			.getLabel(LabelType.logout_failed)));
 	    }
 
@@ -161,34 +174,51 @@ public class LoginPresenter implements Presenter, LoginView.Presenter {
     @Override
     public void onSendPasswordButtonClicked() {
 	// TODO
-	userProfileService.sendNewPassword(view.getEmail(), new AsyncCallback<Boolean>() {
-	    @Override
-	    public void onFailure(Throwable caught) {
-		if (caught instanceof ValidationException) {
-		    ValidationException ex = (ValidationException) caught;
-		    logger.log(Level.FINE, "Server side validation failed: ", ex);
-		    validator.processServerErrors(ex);
-		} else {
-		    logger.log(Level.SEVERE, "Error sending new password: ", caught);
-		    eventBus.fireEvent(new DisplayNotificationEvent(LocalStorage.getInstance().getMessageResource()
-			    .getLabel(LabelType.password_sending_failed)));
-		}
-	    }
+	if (validator.validate()) {
+	    userProfileService.sendNewPassword(view.getEmail(),
+		    new AsyncCallback<Boolean>() {
+			@Override
+			public void onFailure(Throwable caught) {
+			    if (caught instanceof ValidationException) {
+				ValidationException ex = (ValidationException) caught;
+				logger.log(Level.FINE,
+					"Server side validation failed: ", ex);
+				validator.processServerErrors(ex);
+			    } else {
+				logger.log(Level.SEVERE,
+					"Error sending new password: ", caught);
+				eventBus.fireEvent(new DisplayNotificationEvent(
+					LocalStorage
+						.getInstance()
+						.getMessageResource()
+						.getLabel(
+							LabelType.password_sending_failed)));
+			    }
+			}
 
-	    @Override
-	    public void onSuccess(Boolean result) {
-		logger.log(Level.FINE, "sendNewPassword onSuccess");
-		if (result) {
-		    // TODO define what should happen after password
-		    // sending
-		    eventBus.fireEvent(new DisplayNotificationEvent(LocalStorage.getInstance().getMessageResource()
-			    .getLabel(LabelType.password_sent)));
-		} else {
-		    eventBus.fireEvent(new DisplayNotificationEvent(LocalStorage.getInstance().getMessageResource()
-			    .getLabel(LabelType.user_not_found)));
-		}
-	    }
-	});
+			@Override
+			public void onSuccess(Boolean result) {
+			    logger.log(Level.FINE, "sendNewPassword onSuccess");
+			    if (result) {
+				// TODO define what should happen after password
+				// sending
+				eventBus.fireEvent(new DisplayNotificationEvent(
+					LocalStorage
+						.getInstance()
+						.getMessageResource()
+						.getLabel(
+							LabelType.password_sent)));
+			    } else {
+				eventBus.fireEvent(new DisplayNotificationEvent(
+					LocalStorage
+						.getInstance()
+						.getMessageResource()
+						.getLabel(
+							LabelType.user_not_found)));
+			    }
+			}
+		    });
+	}
     }
 
     @Override
