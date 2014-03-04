@@ -1,0 +1,25 @@
+.navbar button, .navbar input {
+	border-radius: 15px;
+}
+
+.navbar .navbar-header {
+	/*background: none transparent;*/
+	margin: 0 40px;
+}
+
+.navbar pre {
+	font-size: 2px;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	color: #999;
+	border: none;  
+}
+
+.navbar-brand {
+	padding: 8px 10px;	
+}
+
+.navbar-brand pre:hover, .navbar-brand pre:focus {
+	color: #fff;
+}

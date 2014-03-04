@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>bundolo - home</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+<link rel="stylesheet" type="text/css"
+	href="css/bootstrap-select.min.css">
+<link rel="stylesheet" type="text/css" href="css/theme.bootstrap_2.css">
+<link rel="stylesheet" type="text/css" href="css/bundolo.css">
+</head>
+
+<!-- HTML code from Bootply.com editor -->
+
+<body>
+	<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"> <pre>
+bbbbbbbb                                                          dddddddd                                          
+b::::::b                                                          d::::::d                 lllllll                  
+b::::::b                                                          d::::::d                 l:::::l                  
+b::::::b                                                          d::::::d                 l:::::l                  
+ b:::::b                                                          d:::::d                  l:::::l                  
+ b:::::bbbbbbbbb    uuuuuu    uuuuuunnnn  nnnnnnnn        ddddddddd:::::d    ooooooooooo    l::::l    ooooooooooo   
+ b::::::::::::::bb  u::::u    u::::un:::nn::::::::nn    dd::::::::::::::d  oo:::::::::::oo  l::::l  oo:::::::::::oo 
+ b::::::::::::::::b u::::u    u::::un::::::::::::::nn  d::::::::::::::::d o:::::::::::::::o l::::l o:::::::::::::::o
+ b:::::bbbbb:::::::bu::::u    u::::unn:::::::::::::::nd:::::::ddddd:::::d o:::::ooooo:::::o l::::l o:::::ooooo:::::o
+ b:::::b    b::::::bu::::u    u::::u  n:::::nnnn:::::nd::::::d    d:::::d o::::o     o::::o l::::l o::::o     o::::o
+ b:::::b     b:::::bu::::u    u::::u  n::::n    n::::nd:::::d     d:::::d o::::o     o::::o l::::l o::::o     o::::o
+ b:::::b     b:::::bu::::u    u::::u  n::::n    n::::nd:::::d     d:::::d o::::o     o::::o l::::l o::::o     o::::o
+ b:::::b     b:::::bu:::::uuuu:::::u  n::::n    n::::nd:::::d     d:::::d o::::o     o::::o l::::l o::::o     o::::o
+ b:::::bbbbbb::::::bu:::::::::::::::uun::::n    n::::nd::::::ddddd::::::ddo:::::ooooo:::::ol::::::lo:::::ooooo:::::o
+ b::::::::::::::::b  u:::::::::::::::un::::n    n::::n d:::::::::::::::::do:::::::::::::::ol::::::lo:::::::::::::::o
+ b:::::::::::::::b    uu::::::::uu:::un::::n    n::::n  d:::::::::ddd::::d oo:::::::::::oo l::::::l oo:::::::::::oo 
+ bbbbbbbbbbbbbbbb       uuuuuuuu  uuuunnnnnn    nnnnnn   ddddddddd   ddddd   ooooooooooo   llllllll   ooooooooooo   </pre>
+				</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<form class="navbar-form form-inline navbar-right" role="form">
+					<button type="submit" class="btn btn-default">Register</button>
+					<div class="form-group">
+						<label class="sr-only" for="username">Username or Email</label> <input
+							type="email" class="form-control" id="username"
+							placeholder="Username or Email">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="password">Password</label> <input
+							type="password" class="form-control" id="password"
+							placeholder="Password">
+					</div>
+					<div class="checkbox">
+						<span title="Remember me"><input type="checkbox" value="on"
+							id="remember" tabindex="0"><label class="sr-only"
+							for="remember">Remember me</label></span>
+					</div>
+					<button type="submit" class="btn btn-default">Sign in</button>
+					<button type="submit" class="btn btn-default">Forgot
+						password?</button>
+				</form>
+			</div>
+
+		</div>
+	</div>
+	<div class="container">
+		<div class="row row-offcanvas">
+			<div class="sidebar pull-right" id="sidebar" role="navigation">
+				<div class="clearfix">
+					<button type="button" class="btn btn-default btn-xs pull-right"
+						data-toggle="offcanvas">
+						<i class="glyphicon glyphicon-chevron-right"></i>
+					</button>
+				</div>
+<!--  -->
+				<ul id="sidebarAccordion" class="sidebar-nav panel-group">
+					<li class="panel panel-default"><span
+						data-parent="#sidebarAccordion" data-target="#collapseTexts"
+						data-toggle="collapse" class="texts_button pull-left"></span>
+						<div class="panel-heading">
+							<a href="#collapseTexts" data-parent="#sidebarAccordion"
+								data-toggle="collapse" class="accordion-toggle collapsed">Texts</a>
+							<div class="input-group pull-right">
+								<input class="form-control" type="text" value="" placeholder=""
+									name="q"> <select class="selectpicker" multiple
+									data-selected-text-format="count" title="Search by"
+									data-width="40%">
+									<option>Title</option>
+									<option>Author</option>
+									<option>Date</option>
+								</select>
+							</div>
+						</div>
+						<div class="panel-collapse collapse" id="collapseTexts">
+							<div class="panel-body">
+								<table class="table table-striped tablesorter">
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th>Author</th>
+											<th>Date</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reef triggerfish</td>
+											<td>mouthbrooder</td>
+											<td>1.1.2014.</td>
+										</tr>
+										<tr>
+											<td>golden shiner</td>
+											<td>oceanic flyingfish</td>
+											<td>21.10.2013.</td>
+										</tr>
+										<tr>
+											<td>ballan wrasse</td>
+											<td>unicorn fish</td>
+											<td>27.12.2012.</td>
+										</tr>
+										<tr>
+											<td>ghost flathead</td>
+											<td>crappie</td>
+											<td>8.6.2012.</td>
+										</tr>
+										<tr>
+											<td>neon tetra</td>
+											<td>halosaur zebra</td>
+											<td>11.1.2014.</td>
+										</tr>
+										<tr>
+											<td>firefish</td>
+											<td>Sundaland noodlefish</td>
+											<td>17.7.2012.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div></li>
+					<li class="panel panel-default"><span
+						data-parent="#sidebarAccordion" data-target="#collapseSerials"
+						data-toggle="collapse" class="serials_button pull-left"></span>
+						<div class="panel-heading">
+							<a href="#collapseSerials" data-parent="#sidebarAccordion"
+								data-toggle="collapse" class="accordion-toggle collapsed">Serials</a>
+							<div class="input-group pull-right">
+								<input class="form-control" type="text" value="" placeholder=""
+									name="q"> <select class="selectpicker" multiple
+									data-selected-text-format="count" title="Search by"
+									data-width="40%">
+									<option>Title</option>
+									<option>Author</option>
+									<option>Date</option>
+								</select>
+							</div>
+						</div>
+						<div class="panel-collapse collapse" id="collapseSerials">
+							<div class="panel-body">
+								<table class="table table-striped tablesorter">
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th>Author</th>
+											<th>Date</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reef triggerfish</td>
+											<td>mouthbrooder</td>
+											<td>1.1.2014.</td>
+										</tr>
+										<tr>
+											<td>golden shiner</td>
+											<td>oceanic flyingfish</td>
+											<td>21.10.2013.</td>
+										</tr>
+										<tr>
+											<td>ballan wrasse</td>
+											<td>unicorn fish</td>
+											<td>27.12.2012.</td>
+										</tr>
+										<tr>
+											<td>ghost flathead</td>
+											<td>crappie</td>
+											<td>8.6.2012.</td>
+										</tr>
+										<tr>
+											<td>neon tetra</td>
+											<td>halosaur zebra</td>
+											<td>11.1.2014.</td>
+										</tr>
+										<tr>
+											<td>firefish</td>
+											<td>Sundaland noodlefish</td>
+											<td>17.7.2012.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div></li>
+					<li class="panel panel-default"><span
+						data-parent="#sidebarAccordion" data-target="#collapseAuthors"
+						data-toggle="collapse" class="authors_button pull-left"></span>
+						<div class="panel-heading">
+							<a href="#collapseAuthors" data-parent="#sidebarAccordion"
+								data-toggle="collapse" class="accordion-toggle collapsed">Authors</a>
+							<div class="input-group pull-right">
+								<input class="form-control" type="text" value="" placeholder=""
+									name="q"> <select class="selectpicker" multiple
+									data-selected-text-format="count" title="Search by"
+									data-width="40%">
+									<option>Title</option>
+									<option>Author</option>
+									<option>Date</option>
+								</select>
+							</div>
+						</div>
+						<div class="panel-collapse collapse" id="collapseAuthors">
+							<div class="panel-body">
+								<table class="table table-striped tablesorter">
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th>Author</th>
+											<th>Date</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reef triggerfish</td>
+											<td>mouthbrooder</td>
+											<td>1.1.2014.</td>
+										</tr>
+										<tr>
+											<td>golden shiner</td>
+											<td>oceanic flyingfish</td>
+											<td>21.10.2013.</td>
+										</tr>
+										<tr>
+											<td>ballan wrasse</td>
+											<td>unicorn fish</td>
+											<td>27.12.2012.</td>
+										</tr>
+										<tr>
+											<td>ghost flathead</td>
+											<td>crappie</td>
+											<td>8.6.2012.</td>
+										</tr>
+										<tr>
+											<td>neon tetra</td>
+											<td>halosaur zebra</td>
+											<td>11.1.2014.</td>
+										</tr>
+										<tr>
+											<td>firefish</td>
+											<td>Sundaland noodlefish</td>
+											<td>17.7.2012.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div></li>					
+					<li class="panel panel-default"><span
+						data-parent="#sidebarAccordion" data-target="#collapseNews"
+						data-toggle="collapse" class="news_button pull-left"></span>
+						<div class="panel-heading">
+							<a href="#collapseNews" data-parent="#sidebarAccordion"
+								data-toggle="collapse" class="accordion-toggle collapsed">News</a>
+							<div class="input-group pull-right">
+								<input class="form-control" type="text" value="" placeholder=""
+									name="q"> <select class="selectpicker" multiple
+									data-selected-text-format="count" title="Search by"
+									data-width="40%">
+									<option>Title</option>
+									<option>Author</option>
+									<option>Date</option>
+								</select>
+							</div>
+						</div>
+						<div class="panel-collapse collapse" id="collapseNews">
+							<div class="panel-body">
+								<table class="table table-striped">
+									<tr>
+										<td>Reef triggerfish</td>
+										<td>mouthbrooder</td>
+										<td>nurse shark</td>
+									</tr>
+									<tr>
+										<td>golden shiner</td>
+										<td>oceanic flyingfish</td>
+										<td>Pacific cod</td>
+									</tr>
+									<tr>
+										<td>ballan wrasse</td>
+										<td>unicorn fish</td>
+										<td>seahorse stingfish</td>
+									</tr>
+									<tr>
+										<td>ghost flathead</td>
+										<td>crappie</td>
+										<td>yellowmargin triggerfish</td>
+									</tr>
+									<tr>
+										<td>neon tetra</td>
+										<td>halosaur zebra</td>
+										<td>lionfish</td>
+									</tr>
+									<tr>
+										<td>firefish</td>
+										<td>Sundaland noodlefish</td>
+										<td>butterfly ray</td>
+									</tr>
+								</table>
+							</div>
+						</div></li>
+					<li class="panel panel-default"><span
+						data-parent="#sidebarAccordion" data-target="#collapseForum"
+						data-toggle="collapse" class="forum_button pull-left"></span>
+						<div class="panel-heading">
+							<a href="#collapseForum" data-parent="#sidebarAccordion"
+								data-toggle="collapse" class="accordion-toggle collapsed">Forum</a>
+							<div class="input-group pull-right">
+								<input class="form-control" type="text" value="" placeholder=""
+									name="q"> <select class="selectpicker" multiple
+									data-selected-text-format="count" title="Search by"
+									data-width="40%">
+									<option>Title</option>
+									<option>Author</option>
+									<option>Date</option>
+								</select>
+							</div>
+						</div>
+						<div class="panel-collapse collapse" id="collapseForum">
+							<div class="panel-body">
+								<table class="table table-striped tablesorter">
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th>Author</th>
+											<th>Date</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reef triggerfish</td>
+											<td>mouthbrooder</td>
+											<td>1.1.2014.</td>
+										</tr>
+										<tr>
+											<td>golden shiner</td>
+											<td>oceanic flyingfish</td>
+											<td>21.10.2013.</td>
+										</tr>
+										<tr>
+											<td>ballan wrasse</td>
+											<td>unicorn fish</td>
+											<td>27.12.2012.</td>
+										</tr>
+										<tr>
+											<td>ghost flathead</td>
+											<td>crappie</td>
+											<td>8.6.2012.</td>
+										</tr>
+										<tr>
+											<td>neon tetra</td>
+											<td>halosaur zebra</td>
+											<td>11.1.2014.</td>
+										</tr>
+										<tr>
+											<td>firefish</td>
+											<td>Sundaland noodlefish</td>
+											<td>17.7.2012.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div></li>
+						<li class="panel panel-default"><span
+						data-parent="#sidebarAccordion" data-target="#collapseContests"
+						data-toggle="collapse" class="contests_button pull-left"></span>
+						<div class="panel-heading">
+							<a href="#collapseContests" data-parent="#sidebarAccordion"
+								data-toggle="collapse" class="accordion-toggle collapsed">Contests</a>
+							<div class="input-group pull-right">
+								<input class="form-control" type="text" value="" placeholder=""
+									name="q"> <select class="selectpicker" multiple
+									data-selected-text-format="count" title="Search by"
+									data-width="40%">
+									<option>Title</option>
+									<option>Author</option>
+									<option>Date</option>
+								</select>
+							</div>
+						</div>
+						<div class="panel-collapse collapse" id="collapseContests">
+							<div class="panel-body">
+								<table class="table table-striped tablesorter">
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th>Author</th>
+											<th>Date</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reef triggerfish</td>
+											<td>mouthbrooder</td>
+											<td>1.1.2014.</td>
+										</tr>
+										<tr>
+											<td>golden shiner</td>
+											<td>oceanic flyingfish</td>
+											<td>21.10.2013.</td>
+										</tr>
+										<tr>
+											<td>ballan wrasse</td>
+											<td>unicorn fish</td>
+											<td>27.12.2012.</td>
+										</tr>
+										<tr>
+											<td>ghost flathead</td>
+											<td>crappie</td>
+											<td>8.6.2012.</td>
+										</tr>
+										<tr>
+											<td>neon tetra</td>
+											<td>halosaur zebra</td>
+											<td>11.1.2014.</td>
+										</tr>
+										<tr>
+											<td>firefish</td>
+											<td>Sundaland noodlefish</td>
+											<td>17.7.2012.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div></li>
+					<li class="panel panel-default"><span
+						data-parent="#sidebarAccordion" data-target="#collapseConnections"
+						data-toggle="collapse" class="connections_button pull-left"></span>
+						<div class="panel-heading">
+							<a href="#collapseConnections" data-parent="#sidebarAccordion"
+								data-toggle="collapse" class="accordion-toggle collapsed">Connections</a>
+							<div class="input-group pull-right">
+								<input class="form-control" type="text" value="" placeholder=""
+									name="q"> <select class="selectpicker" multiple
+									data-selected-text-format="count" title="Search by"
+									data-width="40%">
+									<option>Title</option>
+									<option>Author</option>
+									<option>Date</option>
+								</select>
+							</div>
+						</div>
+						<div class="panel-collapse collapse" id="collapseConnections">
+							<div class="panel-body">
+								<table class="table table-striped tablesorter">
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th>Author</th>
+											<th>Date</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Reef triggerfish</td>
+											<td>mouthbrooder</td>
+											<td>1.1.2014.</td>
+										</tr>
+										<tr>
+											<td>golden shiner</td>
+											<td>oceanic flyingfish</td>
+											<td>21.10.2013.</td>
+										</tr>
+										<tr>
+											<td>ballan wrasse</td>
+											<td>unicorn fish</td>
+											<td>27.12.2012.</td>
+										</tr>
+										<tr>
+											<td>ghost flathead</td>
+											<td>crappie</td>
+											<td>8.6.2012.</td>
+										</tr>
+										<tr>
+											<td>neon tetra</td>
+											<td>halosaur zebra</td>
+											<td>11.1.2014.</td>
+										</tr>
+										<tr>
+											<td>firefish</td>
+											<td>Sundaland noodlefish</td>
+											<td>17.7.2012.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div></li>
+				</ul>
+<!--  -->
+			</div>
+			<div class="main">
+				<p class="pull-right">
+					<button type="button" class="btn btn-default btn-xs"
+						data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+				</p>
+				<div class="jumbotron">
+					<pre>
+bbbbbbbb                                                          dddddddd                                          
+b::::::b                                                          d::::::d                 lllllll                  
+b::::::b                                                          d::::::d                 l:::::l                  
+b::::::b                                                          d::::::d                 l:::::l                  
+ b:::::b                                                          d:::::d                  l:::::l                  
+ b:::::bbbbbbbbb    uuuuuu    uuuuuunnnn  nnnnnnnn        ddddddddd:::::d    ooooooooooo    l::::l    ooooooooooo   
+ b::::::::::::::bb  u::::u    u::::un:::nn::::::::nn    dd::::::::::::::d  oo:::::::::::oo  l::::l  oo:::::::::::oo 
+ b::::::::::::::::b u::::u    u::::un::::::::::::::nn  d::::::::::::::::d o:::::::::::::::o l::::l o:::::::::::::::o
+ b:::::bbbbb:::::::bu::::u    u::::unn:::::::::::::::nd:::::::ddddd:::::d o:::::ooooo:::::o l::::l o:::::ooooo:::::o
+ b:::::b    b::::::bu::::u    u::::u  n:::::nnnn:::::nd::::::d    d:::::d o::::o     o::::o l::::l o::::o     o::::o
+ b:::::b     b:::::bu::::u    u::::u  n::::n    n::::nd:::::d     d:::::d o::::o     o::::o l::::l o::::o     o::::o
+ b:::::b     b:::::bu::::u    u::::u  n::::n    n::::nd:::::d     d:::::d o::::o     o::::o l::::l o::::o     o::::o
+ b:::::b     b:::::bu:::::uuuu:::::u  n::::n    n::::nd:::::d     d:::::d o::::o     o::::o l::::l o::::o     o::::o
+ b:::::bbbbbb::::::bu:::::::::::::::uun::::n    n::::nd::::::ddddd::::::ddo:::::ooooo:::::ol::::::lo:::::ooooo:::::o
+ b::::::::::::::::b  u:::::::::::::::un::::n    n::::n d:::::::::::::::::do:::::::::::::::ol::::::lo:::::::::::::::o
+ b:::::::::::::::b    uu::::::::uu:::un::::n    n::::n  d:::::::::ddd::::d oo:::::::::::oo l::::::l oo:::::::::::oo 
+ bbbbbbbbbbbbbbbb       uuuuuuuu  uuuunnnnnn    nnnnnn   ddddddddd   ddddd   ooooooooooo   llllllll   ooooooooooo   </pre>
+					<p>Combtooth blenny houndshark clown triggerfish paperbone,
+						"European eel tilapia sea snail tilapia waryfish," Bitterling
+						crocodile shark. Flagblenny Hammerjaw stonecat freshwater herring
+						false brotula false moray; kanyu Atlantic eel blue triggerfish
+						weeverfish Rainbowfish leaffish. Rudderfish alligatorfish,
+						Billfish gray reef shark Razorback sucker flounder quillback;
+						clownfish medusafish Atlantic trout? Gouramie bichir frilled shark
+						dragonet spiny dogfish cuckoo wrasse.</p>
+				</div>
+				
+			</div>
+<div class="row slider">
+					<ul class="nav nav-tabs">
+						<li class="active overview_button"><a href="#overview_tab"
+							data-toggle="tab" title="Overview"></a></li>
+						<li class="news_button"><a href="#news_tab" data-toggle="tab"
+							title="News"></a></li>
+						<li class="authors_button"><a href="#authors_tab"
+							data-toggle="tab" title="Authors"></a></li>
+						<li class="texts_button"><a href="#texts_tab"
+							data-toggle="tab" title="Texts"></a></li>
+						<li class="serials_button"><a href="#serials_tab"
+							data-toggle="tab" title="Serials"></a></li>
+						<li class="forum_button"><a href="#forum_tab"
+							data-toggle="tab" title="Forum"></a></li>
+						<li class="contests_button"><a href="#contests_tab"
+							data-toggle="tab" title="Contests"></a></li>
+						<li class="connections_button"><a href="#connections_tab"
+							data-toggle="tab" title="Connections"></a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="overview_tab">
+							<div id="overview-carousel" class="carousel slide"
+								data-ride="carousel" data-interval="0">
+								<div>
+									<ol class="carousel-indicators">
+										<li data-target="#overview-carousel" data-slide-to="0"
+											class=""></li>
+										<li data-target="#overview-carousel" data-slide-to="1"
+											class=""></li>
+										<li data-target="#overview-carousel" data-slide-to="2"
+											class="active"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="item">
+											<p>Anemonefish murray cod trahira gurnard spaghetti eel
+												tuna. Barracuda mooneye, temperate bass, streamer fish;
+												bigscale fish round whitefish leaffish aruana, carpetshark,
+												ridgehead giant sea bass. Whitebait tarpon; ridgehead,
+												largenose fish white shark archerfish, "moonfish sand eel
+												Shingle Fish Pacific saury whitebait, sarcastic fringehead
+												lake chub," emperor angelfish. Scythe butterfish wrymouth
+												cobbler boarfish skipping goby Blind goby climbing perch
+												fierasfer? Yellowfin pike arapaima grunt sculpin ribbonfish
+												long-finned char huchen spikefish bullhead shark saw shark
+												silver dollar. Albacore ide cutlassfish wolf-herring
+												king-of-the-salmon sand tiger river shark codling flagtail
+												porbeagle shark triggerfish scabbard fish. Tompot blenny;
+												Rasbora round stingray, "bigeye shell-ear," Lost River
+												sucker clownfish walleye shortnose chimaera.</p>
+											<p>Candlefish, whiting, brook trout Spanish mackerel:
+												kelp perch murray cod pygmy sunfish; oceanic whitetip shark
+												eel Jack Dempsey orange roughy. Red whalefish pomfret, mud
+												catfish black bass golden dojo, cookie-cutter shark electric
+												knifefish! Quillfish spiny-back, "clingfish," gunnel
+												sandperch spinefoot beaked salmon snakehead peacock flounder
+												northern clingfish yellowfin cutthroat trout." Mosshead
+												warbonnet flying gurnard bonefish long-whiskered catfish
+												lampfish walu tiger shark yellowbanded perch Pacific lamprey
+												lemon sole. Deep sea eel yellowtail barracuda algae eater
+												threespine stickleback pike murray cod, "yellowfin croaker
+												wels catfish." Sarcastic fringehead Long-finned sand diver
+												pearl danio northern squawfish jellynose fish, wolf-herring;
+												electric ray desert pupfish. Arowana bass spadefish Pacific
+												hake Atlantic herring giant wels! Tenpounder catfish
+												soapfish, freshwater herring, Black pickerel rudd European
+												flounder Reef triggerfish. California flyingfish mola
+												Raccoon butterfly fish carpsucker herring.</p>
+										</div>
+										<div class="item">Northern anchovy leatherjacket
+											rockfish, halibut: leatherjacket driftwood catfish Old World
+											rivuline clingfish riffle dace; greeneye bottlenose
+											shrimpfish; northern squawfish flagfin knifejaw piranha
+											sheepshead kelp perch zebra oto. Sand tilefish Russian
+											sturgeon herring squeaker gulf menhaden footballfish spiny
+											basslet upside-down catfish barbel, ocean perch
+											king-of-the-salmon featherfin knifefish. Blacksmelt taimen
+											yellowfin grouper, "loweye catfish, freshwater hatchetfish,
+											dealfish Atlantic salmon, mail-cheeked fish tilefish,
+											horsefish piranha," Reedfish weever. Trevally blacktip reef
+											shark ocean perch, requiem shark monkeyface prickleback,
+											northern sea robin. Hawkfish crocodile shark warmouth deep
+											sea smelt paperbone dory banded killifish mola flatfish,
+											"pike velvetfish?" Pearl perch. Round stingray, snakehead,
+											Old World rivuline climbing catfish blue gourami slender mola
+											crocodile icefish, "perch river shark pikehead crevice
+											kelpfish!" Glass catfish northern sea robin, blue whiting
+											kissing gourami Blind goby skate walking catfish Rainbow
+											trout.</div>
+										<div class="item active">Javelin catfish soapfish
+											smoothtongue cobbler tailor, scythe butterfish? Milkfish
+											porgy antenna codlet mahseer silverside triggerfish sand
+											knifefish humuhumunukunukuapua'a. Zebra tilapia gray
+											eel-catfish ribbonfish merluccid hake freshwater hatchetfish
+											broadband dogfish mojarra slender snipe eel thornfish--Molly
+											Miller remora masu salmon sweeper. Glass catfish bowfin
+											large-eye bream sea lamprey, European chub dottyback North
+											American freshwater catfish! Lionfish bluntnose minnow
+											European minnow wobbegong, "sea bass," flathead largemouth
+											bass moray eel: crocodile shark channel bass trout creek chub
+											Moses sole. Parasitic catfish sabertooth splitfin sailfish
+											crevice kelpfish pipefish pelagic cod." Salmon emperor bream
+											Black angelfish, Pacific salmon pirarucu crocodile icefish
+											angelfish gray reef shark madtom eelblenny tompot blenny.
+											Warty angler; gulper cobbler, tilefish; bluntnose minnow
+											luminous hake.</div>
+									</div>
+									<a class="left carousel-control pull-left"
+										href="#overview-carousel" data-slide="prev"> <img
+										src="images/circle.png">
+									</a> <a class="right carousel-control pull-right"
+										href="#overview-carousel" data-slide="next"> <img
+										src="images/circle.png">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="news_tab">
+							<div id="news-carousel" class="carousel slide"
+								data-ride="carousel" data-interval="0">
+								<div>
+									<ol class="carousel-indicators">
+										<li data-target="#news-carousel" data-slide-to="0" class=""></li>
+										<li data-target="#news-carousel" data-slide-to="1" class=""></li>
+										<li data-target="#news-carousel" data-slide-to="2" class=""></li>
+										<li data-target="#news-carousel" data-slide-to="3" class=""></li>
+										<li data-target="#news-carousel" data-slide-to="4"
+											class="active"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="item">
+											<p>Cherubfish burma danio peacock flounder herring smelt
+												sand goby splitfin, large-eye bream Death Valley pupfish
+												bristlemouth, "Australian lungfish carpetshark
+												sandburrower." Sculpin whale shark emperor angelfish,
+												triplefin blenny barbeled houndshark barbel bocaccio
+												Razorback sucker sawfish, sand knifefish. Mola mola sunfish
+												bat ray electric catfish yellowbanded perch marine
+												hatchetfish, ground shark sea catfish king-of-the-salmon,
+												"alligatorfish," triplefin blenny orbicular batfish pencil
+												catfish. Flathead catfish false cat shark kelp perch sea
+												catfish, molly northern squawfish! Sleeper shark redlip
+												blenny eel cod mud catfish pilchard needlefish kuhli loach
+												red velvetfish peladillo northern pike freshwater eel.
+												Frogmouth catfish elasmobranch, Cherubfish hammerhead shark
+												muskellunge, brotula! Tench tilapia temperate ocean-bass
+												flathead, "torrent catfish sleeper shark, Steve fish
+												medaka." Black bass candiru trout-perch; spiny eel red
+												snapper.</p>
+										</div>
+										<div class="item">Northern anchovy leatherjacket
+											rockfish, halibut: leatherjacket driftwood catfish Old World
+											rivuline clingfish riffle dace; greeneye bottlenose
+											shrimpfish; northern squawfish flagfin knifejaw piranha
+											sheepshead kelp perch zebra oto. Sand tilefish Russian
+											sturgeon herring squeaker gulf menhaden footballfish spiny
+											basslet upside-down catfish barbel, ocean perch
+											king-of-the-salmon featherfin knifefish. Blacksmelt taimen
+											yellowfin grouper, "loweye catfish, freshwater hatchetfish,
+											dealfish Atlantic salmon, mail-cheeked fish tilefish,
+											horsefish piranha," Reedfish weever. Trevally blacktip reef
+											shark ocean perch, requiem shark monkeyface prickleback,
+											northern sea robin. Hawkfish crocodile shark warmouth deep
+											sea smelt paperbone dory banded killifish mola flatfish,
+											"pike velvetfish?" Pearl perch. Round stingray, snakehead,
+											Old World rivuline climbing catfish blue gourami slender mola
+											crocodile icefish, "perch river shark pikehead crevice
+											kelpfish!" Glass catfish northern sea robin, blue whiting
+											kissing gourami Blind goby skate walking catfish Rainbow
+											trout.</div>
+										<div class="item">Pipefish sauger whitetip reef shark
+											emperor angelfish sand diver sand stargazer, "threespine
+											stickleback Peter's elephantnose fish ladyfish?" Gila trout
+											rough sculpin Pacific lamprey weever threadfin bream;
+											fangtooth southern flounder shrimpfish grunt! Delta smelt
+											dogteeth tetra koi jellynose fish pilot fish mooneye.
+											California flyingfish sawtooth eel. Dwarf gourami, coelacanth
+											amur pike forehead brooder snubnose eel.</div>
+										<div class="item">Longfin pipefish french angelfish
+											sandroller brook lamprey trout-perch, dwarf loach olive
+											flounder Pacific salmon. Stonefish bluefin tuna threadsail
+											char, guitarfish bango northern squawfish tonguefish
+											coelacanth king-of-the-salmon smooth dogfish barbelless
+											catfish. Sand tilefish round stingray steelhead, peladillo
+											combtail gourami: turkeyfish; scat. Blue eye searobin
+											hardhead catfish Oregon chub great white shark, "rudd
+											featherfin knifefish, manefish." Pirate perch northern
+											lampfish bamboo shark coho salmon harelip sucker catalufa
+											beaked sandfish. Oarfish, mudfish bonito Blind goby king of
+											herring flat loach mudfish. Cutthroat eel green swordtail
+											dragonet triplefin blenny. Cowfish squawfish Blind goby
+											bottlenose Pacific cod creek chub? Telescopefish wolffish
+											sillago demoiselle: Redhorse sucker barbeled houndshark sand
+											knifefish electric knifefish pike eel.</div>
+										<div class="item active">Shrimpfish lined sole zander
+											tubeshoulder mud cat North American freshwater catfish
+											largenose fish Quillfish queen parrotfish. Swordtail,
+											weeverfish, channel bass bigmouth buffalo, flier Jack Dempsey
+											yellowbelly tail catfish. Minnow dorab blackchin porbeagle
+											shark southern sandfish: fierasfer; merluccid hake silver
+											driftfish barbelless catfish. Saury koi, bluntnose minnow
+											leopard danio round herring; salmon shark. Dab candiru sábalo
+											bullhead shark ribbonbearer. Dogteeth tetra paddlefish,
+											four-eyed fish thorny catfish largemouth bass duckbilled
+											barracudina?</div>
+									</div>
+									<a class="left carousel-control pull-left"
+										href="#news-carousel" data-slide="prev"> <img
+										src="images/circle.png">
+									</a> <a class="right carousel-control pull-right"
+										href="#news-carousel" data-slide="next"> <img
+										src="images/circle.png">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="authors_tab">
+							<div id="authors-carousel" class="carousel slide"
+								data-ride="carousel" data-interval="0">
+								<div>
+									<ol class="carousel-indicators">
+										<li data-target="#authors-carousel" data-slide-to="0" class=""></li>
+										<li data-target="#authors-carousel" data-slide-to="1" class=""></li>
+										<li data-target="#authors-carousel" data-slide-to="2"
+											class="active"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="item">
+											<p>Australian grayling Mozambique tilapia oilfish leopard
+												danio Molly Miller barracuda rough scad. Pencil catfish
+												rockfish; mojarra thornyhead codling, eucla cod warmouth
+												tripod fish, saber-toothed blenny bango, green swordtail,
+												houndshark, "shortnose chimaera." Pacific saury northern
+												lampfish long-finned char salamanderfish cusk-eel Sacramento
+												blackfish. Featherfin knifefish mud catfish pearleye: saury
+												sind danio popeye catafula dragon goby ghoul bent-tooth;
+												shad hardhead catfish shortnose greeneye? Goldeye Bengal
+												danio electric ray deepwater flathead dusky grouper.
+												Northern clingfish Cherubfish Chinook salmon, dottyback;
+												daggertooth pike conger. Mudskipper Rabbitfish yellowtail
+												barracuda Blind shark coley lemon shark southern Dolly
+												Varden houndshark.</p>
+											<p>Candlefish, whiting, brook trout Spanish mackerel:
+												kelp perch murray cod pygmy sunfish; oceanic whitetip shark
+												eel Jack Dempsey orange roughy. Red whalefish pomfret, mud
+												catfish black bass golden dojo, cookie-cutter shark electric
+												knifefish! Quillfish spiny-back, "clingfish," gunnel
+												sandperch spinefoot beaked salmon snakehead peacock flounder
+												northern clingfish yellowfin cutthroat trout." Mosshead
+												warbonnet flying gurnard bonefish long-whiskered catfish
+												lampfish walu tiger shark yellowbanded perch Pacific lamprey
+												lemon sole. Deep sea eel yellowtail barracuda algae eater
+												threespine stickleback pike murray cod, "yellowfin croaker
+												wels catfish." Sarcastic fringehead Long-finned sand diver
+												pearl danio northern squawfish jellynose fish, wolf-herring;
+												electric ray desert pupfish. Arowana bass spadefish Pacific
+												hake Atlantic herring giant wels! Tenpounder catfish
+												soapfish, freshwater herring, Black pickerel rudd European
+												flounder Reef triggerfish. California flyingfish mola
+												Raccoon butterfly fish carpsucker herring.</p>
+											<p>Dory rock bass grenadier; combfish Indian mul, pike
+												conger sixgill ray whitefish American sole scaly dragonfish
+												darter dorado. Shell-ear; false moray barracuda giant wels
+												fusilier fish; herring cuchia, "lookdown catfish,"
+												cookie-cutter shark mudfish, orangestriped triggerfish tiger
+												shovelnose catfish. Snook deep sea eel, Atlantic saury
+												footballfish tang Colorado squawfish; rudderfish boarfish
+												taimen, barracudina flier emperor bream redtooth
+												triggerfish. Bigmouth buffalo deep sea smelt rice eel
+												southern grayling lemon shark, trout cod. Pacific
+												salmon--sawfish yellowfin grouper, trevally; banded
+												killifish ground shark, bobtail snipe eel, "mud cat?" Olive
+												flounder; queen danio.</p>
+										</div>
+										<div class="item">Pipefish sauger whitetip reef shark
+											emperor angelfish sand diver sand stargazer, "threespine
+											stickleback Peter's elephantnose fish ladyfish?" Gila trout
+											rough sculpin Pacific lamprey weever threadfin bream;
+											fangtooth southern flounder shrimpfish grunt! Delta smelt
+											dogteeth tetra koi jellynose fish pilot fish mooneye.
+											California flyingfish sawtooth eel. Dwarf gourami, coelacanth
+											amur pike forehead brooder snubnose eel.</div>
+										<div class="item active">Pomfret Atlantic saury
+											Canthigaster rostrata tilapia Sevan trout lumpsucker slender
+											mola goldfish trout boga Australasian salmon mahi-mahi
+											barracudina tuna, silver dollar tarpon roosterfish. Bull
+											trout Blind shark vendace orbicular velvetfish mora neon
+											tetra betta Redfish electric eel ghost pipefish. Stargazer
+											European chub pygmy sunfish Quillfish tompot blenny Rio
+											Grande perch huchen smelt-whiting knifejaw tenuis. Pacific
+											lamprey sind danio smalltooth sawfish ropefish southern
+											sandfish. Escolar sea raven scissor-tail rasbora baikal
+											oilfish pollock kissing gourami codling sand knifefish grass
+											carp."</div>
+									</div>
+									<a class="left carousel-control pull-left"
+										href="#authors-carousel" data-slide="prev"> <img
+										src="images/circle.png">
+									</a> <a class="right carousel-control pull-right"
+										href="#authors-carousel" data-slide="next"> <img
+										src="images/circle.png">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="texts_tab">
+							<div id="texts-carousel" class="carousel slide"
+								data-ride="carousel" data-interval="0">
+								<div>
+									<ol class="carousel-indicators">
+										<li data-target="#texts-carousel" data-slide-to="0" class=""></li>
+										<li data-target="#texts-carousel" data-slide-to="1" class=""></li>
+										<li data-target="#texts-carousel" data-slide-to="2" class=""></li>
+										<li data-target="#texts-carousel" data-slide-to="3"
+											class="active"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="item">Temperate bass sprat quillback halibut
+											shell-ear paddlefish ziege limia sailfish, "Alaska blackfish
+											Pacific salmon three spot gourami Quillfish, crevice
+											kelpfish." Flying gurnard; smalltooth sawfish, "sergeant
+											major vendace warbonnet sea raven mouthbrooder deepwater
+											cardinalfish sand goby chub sablefish; candiru New Zealand
+											sand diver." Lake whitefish crocodile shark glass knifefish
+											northern pearleye Bigscale pomfret; cichlid, coho salmon,
+											longfin smelt. Wahoo shell-ear; loach minnow halosaur
+											longnose sucker long-finned char wobbegong gray mullet
+											bluefish channel bass.</div>
+										<div class="item">
+											<p>Sea lamprey demoiselle three-toothed puffer spikefish
+												three spot gourami catalufa cardinalfish sand tilefish
+												kappy. Slimy mackerel grunion ghost pipefish loach minnow
+												shortnose greeneye; bonnetmouth. Threespine stickleback,
+												Quillfish roughy red velvetfish kappy halibut loosejaw
+												Sacramento splittail, brook lamprey. Cuchia sea toad sea
+												snail prowfish, "wallago, longnose dace yellowbelly tail
+												catfish roanoke bass, Russian sturgeon, temperate perch
+												midshipman pearl danio arrowtooth eel ray; freshwater eel."
+												Loach goby lake whitefish river stingray slipmouth toadfish:
+												large-eye bream triplefin blenny sleeper Bitterling.</p>
+											<p>Dory rock bass grenadier; combfish Indian mul, pike
+												conger sixgill ray whitefish American sole scaly dragonfish
+												darter dorado. Shell-ear; false moray barracuda giant wels
+												fusilier fish; herring cuchia, "lookdown catfish,"
+												cookie-cutter shark mudfish, orangestriped triggerfish tiger
+												shovelnose catfish. Snook deep sea eel, Atlantic saury
+												footballfish tang Colorado squawfish; rudderfish boarfish
+												taimen, barracudina flier emperor bream redtooth
+												triggerfish. Bigmouth buffalo deep sea smelt rice eel
+												southern grayling lemon shark, trout cod. Pacific
+												salmon--sawfish yellowfin grouper, trevally; banded
+												killifish ground shark, bobtail snipe eel, "mud cat?" Olive
+												flounder; queen danio.</p>
+										</div>
+										<div class="item">Pike leaffish morid cod yellowtail
+											horse mackerel trunkfish danio boafish bream yellowfin
+											croaker. Swordfish sheepshead; torrent fish: giant sea bass
+											seamoth peacock flounder atka mackerel pompano dolphinfish,
+											Black angelfish. Pollyfish; Razorback sucker scabbard fish
+											vendace blue triggerfish chubsucker pineconefish tompot
+											blenny, basslet ballan wrasse soldierfish, stream catfish
+											broadband dogfish, jackfish filefish, Rabbitfish hawkfish
+											crocodile icefish. Sweeper mojarra, giant wels springfish
+											grunter Black scabbardfish scat Russian sturgeon steelhead
+											frogmouth catfish, scabbard fish; longfin escolar icefish
+											goosefish boafish buffalofish: European minnow deep sea
+											anglerfish. Flat loach three spot gourami bonytail chub.
+											Grunt walking catfish velvet catfish cutthroat eel barred
+											danio, gibberfish Modoc sucker sablefish; sand tilefish!
+											Sailfish Oriental loach deepwater stingray Australian
+											prowfish huchen, pickerel bullhead shark buffalofish flagfin
+											yellow jack. Lined sole arowana, lamprey summer flounder
+											hairtail oarfish yellow weaver redside sixgill ray fierasfer.
+											Northern lampfish titan triggerfish Redfish louvar spiny-back
+											taimen; nibbler, cavefish gulper eel Dolly Varden trout
+											thornyhead? Billfish: South American darter blue triggerfish
+											bowfin.</div>
+										<div class="item active">Blue catfish frogfish trout
+											gianttail silver carp? Quillback tubeshoulder yellow-edged
+											moray pelican gulper trumpeter barbel surgeonfish Mexican
+											blind cavefish leopard danio tube-eye ocean sunfish
+											archerfish cornetfish. Stickleback sea bream, zebra tilapia
+											wolf-eel banjo catfish. Cichlid, marlin giant sea bass
+											whitebait, "spearfish shiner bandfish midshipman swordtail
+											grunter." Jewelfish, Cornish Spaktailed Bream bull shark
+											banjo catfish, bonefish blue eye Raccoon butterfly fish.
+											Atlantic cod central mudminnow minnow naked-back knifefish
+											pink salmon killifish; black dragonfish Port Jackson shark.
+											Pomfret velvet-belly shark gudgeon plunderfish; threadfin
+											bream king of herring slimy mackerel gurnard sergeant major.
+											Scissor-tail rasbora conger eel mosquitofish slimy mackerel
+											roundhead. Halfbeak catalufa bluefish panga filefish central
+											mudminnow round whitefish hog sucker snook sawfish ocean
+											perch.</div>
+									</div>
+									<a class="left carousel-control pull-left"
+										href="#texts-carousel" data-slide="prev"> <img
+										src="images/circle.png">
+									</a> <a class="right carousel-control pull-right"
+										href="#texts-carousel" data-slide="next"> <img
+										src="images/circle.png">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="serials_tab">
+							<div id="serials-carousel" class="carousel slide"
+								data-ride="carousel" data-interval="0">
+								<div>
+									<ol class="carousel-indicators">
+										<li data-target="#serials-carousel" data-slide-to="0"
+											class=""></li>
+										<li data-target="#serials-carousel" data-slide-to="1"
+											class=""></li>
+										<li data-target="#serials-carousel" data-slide-to="2"
+											class="active"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="item">
+											<p>Hardhead catfish, rockling stonefish climbing gourami
+												yellow perch redlip blenny, bocaccio glowlight danio.
+												Australian lungfish Sacramento blackfish airbreathing
+												catfish Reedfish saury longfin smelt Gila trout. Sablefish
+												orbicular batfish ridgehead marine hatchetfish kelpfish
+												lagena tubeblenny flounder yellowbanded perch ocean perch
+												antenna codlet whale catfish! Lionfish Black triggerfish
+												topminnow whitefish madtom pearlfish snake mackerel Redhorse
+												sucker orbicular batfish ling silver hake torrent fish
+												medusafish?</p>
+										</div>
+										<div class="item">Kaluga cusk-eel tilefish barbel
+											northern pearleye tenpounder. Boarfish, barbeled houndshark
+											whiptail gulper Indian mul goosefish Rasbora giant danio
+											shortnose chimaera pilchard bonytail chub snipe eel, redlip
+											blenny African lungfish. Giant wels tonguefish white marlin
+											electric stargazer armoured catfish rough sculpin dragon
+											goby; banded killifish. Albacore blackfish Atlantic saury
+											Moses sole mojarra; dragonfish javelin Old World rivuline
+											smooth dogfish featherback riffle dace streamer fish. Discus;
+											bigmouth buffalo cornetfish threadfin Jack Dempsey wormfish
+											mako shark murray cod shell-ear California halibut
+											muskellunge Blacksmelt Australian prowfish mackerel shark
+											grenadier beardfish. Clingfish: pirarucu bonito cod icefish
+											rudd cavefish round whitefish cow shark inconnu bluefish
+											sheepshead cookie-cutter shark. Hillstream loach labyrinth
+											fish, alooh powen mooneye dorab mora, tubeblenny crestfish.</div>
+										<div class="item active">Zebra trout lemon shark,
+											yellow-and-black triplefin California flyingfish yellow jack
+											barracudina; coley loach catfish king of herring. Dwarf
+											loach, prickly shark atka mackerel haddock southern hake
+											saury naked-back knifefish, monkfish vimba.</div>
+									</div>
+									<a class="left carousel-control pull-left"
+										href="#serials-carousel" data-slide="prev"> <img
+										src="images/circle.png">
+									</a> <a class="right carousel-control pull-right"
+										href="#serials-carousel" data-slide="next"> <img
+										src="images/circle.png">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="forum_tab">
+							<div id="forum-carousel" class="carousel slide"
+								data-ride="carousel" data-interval="0">
+								<div>
+									<ol class="carousel-indicators">
+										<li data-target="#forum-carousel" data-slide-to="0" class=""></li>
+										<li data-target="#forum-carousel" data-slide-to="1" class=""></li>
+										<li data-target="#forum-carousel" data-slide-to="2"
+											class="active"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="item">Flying characin eel-goby cepalin
+											sarcastic fringehead goldeye slipmouth. Golden trout emperor
+											angelfish. Celebes rainbowfish wrasse cavefish, paperbone sea
+											raven, naked-back knifefish."</div>
+										<div class="item">Giant wels, mahi-mahi sarcastic
+											fringehead striped burrfish, elephantnose fish kelp perch.
+											Delta smelt king-of-the-salmon mudskipper sole sandburrower
+											rockfish mojarra blue gourami. Mail-cheeked fish devil ray
+											Red whalefish smelt megamouth shark, spiderfish mosquitofish
+											stingray píntano sweeper bocaccio shortnose sucker. Spiny
+											dogfish emperor, golden loach, "Pacific lamprey snubnose
+											parasitic eel, river stingray, barbelless catfish,
+											muskellunge, mudsucker ghost knifefish whiptail gulper,
+											sharksucker."</div>
+										<div class="item active">Sevan trout Lost River sucker
+											orbicular batfish longjaw mudsucker central mudminnow
+											beachsalmon. Pacific salmon, Rainbow trout flat loach devil
+											ray lake trout snake mudhead barbel white croaker; queen
+											triggerfish Reedfish; southern hake shark. Knifejaw pygmy
+											sunfish arowana silver dollar cuckoo wrasse springfish lenok
+											electric knifefish greenling, yellowfin surgeonfish perch
+											freshwater eel sawfish goldeye. Slimehead firefish southern
+											hake weeverfish greenling Hammerjaw peladillo regal whiptail
+											catfish pollock armored searobin longfin Rio Grande perch
+											yellowfin tuna Blind shark Gila trout, "slipmouth mola mola
+											sunfish shell-ear knifefish." Threadsail naked-back
+											knifefish; pumpkinseed; sand diver yellowtail amberjack
+											torrent catfish; bighead carp whitetip reef shark merluccid
+											hake.</div>
+									</div>
+									<a class="left carousel-control pull-left"
+										href="#forum-carousel" data-slide="prev"> <img
+										src="images/circle.png">
+									</a> <a class="right carousel-control pull-right"
+										href="#forum-carousel" data-slide="next"> <img
+										src="images/circle.png">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="contests_tab">
+							<div id="contests-carousel" class="carousel slide"
+								data-ride="carousel" data-interval="0">
+								<div>
+									<ol class="carousel-indicators">
+										<li data-target="#contests-carousel" data-slide-to="0"
+											class=""></li>
+										<li data-target="#contests-carousel" data-slide-to="1"
+											class=""></li>
+										<li data-target="#contests-carousel" data-slide-to="2"
+											class="active"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="item">
+											<p>Hardhead catfish, rockling stonefish climbing gourami
+												yellow perch redlip blenny, bocaccio glowlight danio.
+												Australian lungfish Sacramento blackfish airbreathing
+												catfish Reedfish saury longfin smelt Gila trout. Sablefish
+												orbicular batfish ridgehead marine hatchetfish kelpfish
+												lagena tubeblenny flounder yellowbanded perch ocean perch
+												antenna codlet whale catfish! Lionfish Black triggerfish
+												topminnow whitefish madtom pearlfish snake mackerel Redhorse
+												sucker orbicular batfish ling silver hake torrent fish
+												medusafish?</p>
+										</div>
+										<div class="item">Kaluga cusk-eel tilefish barbel
+											northern pearleye tenpounder. Boarfish, barbeled houndshark
+											whiptail gulper Indian mul goosefish Rasbora giant danio
+											shortnose chimaera pilchard bonytail chub snipe eel, redlip
+											blenny African lungfish. Giant wels tonguefish white marlin
+											electric stargazer armoured catfish rough sculpin dragon
+											goby; banded killifish. Albacore blackfish Atlantic saury
+											Moses sole mojarra; dragonfish javelin Old World rivuline
+											smooth dogfish featherback riffle dace streamer fish. Discus;
+											bigmouth buffalo cornetfish threadfin Jack Dempsey wormfish
+											mako shark murray cod shell-ear California halibut
+											muskellunge Blacksmelt Australian prowfish mackerel shark
+											grenadier beardfish. Clingfish: pirarucu bonito cod icefish
+											rudd cavefish round whitefish cow shark inconnu bluefish
+											sheepshead cookie-cutter shark. Hillstream loach labyrinth
+											fish, alooh powen mooneye dorab mora, tubeblenny crestfish.</div>
+										<div class="item active">Zebra trout lemon shark,
+											yellow-and-black triplefin California flyingfish yellow jack
+											barracudina; coley loach catfish king of herring. Dwarf
+											loach, prickly shark atka mackerel haddock southern hake
+											saury naked-back knifefish, monkfish vimba.</div>
+									</div>
+									<a class="left carousel-control pull-left"
+										href="#contests-carousel" data-slide="prev"> <img
+										src="images/circle.png">
+									</a> <a class="right carousel-control pull-right"
+										href="#contests-carousel" data-slide="next"> <img
+										src="images/circle.png">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="connections_tab">
+							<div id="connections-carousel" class="carousel slide"
+								data-ride="carousel" data-interval="0">
+								<div>
+									<ol class="carousel-indicators">
+										<li data-target="#connections-carousel" data-slide-to="0" class=""></li>
+										<li data-target="#connections-carousel" data-slide-to="1" class=""></li>
+										<li data-target="#connections-carousel" data-slide-to="2"
+											class="active"></li>
+										<li data-target="#connections-carousel" data-slide-to="3" class=""></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="item">Walu pleco rough pomfret brown trout.
+											Alfonsino bonytongue; clown triggerfish, pygmy sunfish
+											pricklefish kelp perch, capelin Norwegian Atlantic salmon.
+											Poolfish candlefish zebra pleco, "pelagic cod, finback cat
+											shark." Yellowfin croaker Rattail loweye catfish kokanee
+											beardfish scabbard fish: barramundi blue catfish blue
+											gourami.</div>
+										<div class="item">Temperate bass sprat quillback halibut
+											shell-ear paddlefish ziege limia sailfish, "Alaska blackfish
+											Pacific salmon three spot gourami Quillfish, crevice
+											kelpfish." Flying gurnard; smalltooth sawfish, "sergeant
+											major vendace warbonnet sea raven mouthbrooder deepwater
+											cardinalfish sand goby chub sablefish; candiru New Zealand
+											sand diver." Lake whitefish crocodile shark glass knifefish
+											northern pearleye Bigscale pomfret; cichlid, coho salmon,
+											longfin smelt. Wahoo shell-ear; loach minnow halosaur
+											longnose sucker long-finned char wobbegong gray mullet
+											bluefish channel bass.</div>
+										<div class="item active">Reef triggerfish, "titan
+											triggerfish, trout-perch pelican gulper squarehead catfish,
+											Reef triggerfish." Blue triggerfish barramundi halfbeak
+											European chub. Shortnose greeneye mummichog morid cod cownose
+											ray scat summer flounder sea dragon spaghetti eel. Arctic
+											char vimba European flounder whitetip reef shark rough
+											sculpin scythe butterfish glass catfish char creek chub
+											flabby whalefish? Mozambique tilapia french angelfish
+											lionfish codlet; croaker. Gudgeon silverside Atlantic trout
+											Asiatic glassfish threadfin bream Blind goby. Jewelfish;
+											channel bass swordtail waryfish Rio Grande perch bass river
+											loach mullet South American Lungfish, marine hatchetfish
+											nurseryfish scythe butterfish. Silver dollar mojarra; kappy
+											mooneye stingfish pencilfish sandbar shark, bullhead shark
+											bluntnose knifefish Arctic char pelican eel firefish
+											deepwater stingray. Wolf-herring bat ray electric ray
+											zebrafish whitebait grunt inanga blue whiting, demoiselle
+											golden dojo slimehead flabby whalefish Antarctic icefish
+											freshwater flyingfish blue-redstripe danio moonfish sweeper.</div>
+										<div class="item">Kaluga cusk-eel tilefish barbel
+											northern pearleye tenpounder. Boarfish, barbeled houndshark
+											whiptail gulper Indian mul goosefish Rasbora giant danio
+											shortnose chimaera pilchard bonytail chub snipe eel, redlip
+											blenny African lungfish. Giant wels tonguefish white marlin
+											electric stargazer armoured catfish rough sculpin dragon
+											goby; banded killifish. Albacore blackfish Atlantic saury
+											Moses sole mojarra; dragonfish javelin Old World rivuline
+											smooth dogfish featherback riffle dace streamer fish. Discus;
+											bigmouth buffalo cornetfish threadfin Jack Dempsey wormfish
+											mako shark murray cod shell-ear California halibut
+											muskellunge Blacksmelt Australian prowfish mackerel shark
+											grenadier beardfish. Clingfish: pirarucu bonito cod icefish
+											rudd cavefish round whitefish cow shark inconnu bluefish
+											sheepshead cookie-cutter shark. Hillstream loach labyrinth
+											fish, alooh powen mooneye dorab mora, tubeblenny crestfish.</div>
+									</div>
+									<a class="left carousel-control pull-left"
+										href="#connections-carousel" data-slide="prev"> <img
+										src="images/circle.png">
+									</a> <a class="right carousel-control pull-right"
+										href="#connections-carousel" data-slide="next"> <img
+										src="images/circle.png">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<!-- <footer>
+			<p>Ã‚Â© Company 2013</p>
+		</footer> -->
+
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+	<script type="text/javascript"
+		src="js/jquery.tablesorter.widgets.min.js"></script>
+	<script src="js/bundolo.js"></script>
+
+	<script type="text/javascript">
+		$(window).on('load', function() {
+			$('.selectpicker').selectpicker({
+				countSelectedText : '{0} of {1}'
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(
+				function() {
+					$(function() {
+						$(".tablesorter").tablesorter({
+							theme : 'bootstrap',
+							headerTemplate : '{content} {icon}',
+							widgets : [ 'zebra', 'columns', 'uitheme' ],
+							sortList : [ [ 0, 0 ], [ 1, 0 ] ],
+						});
+					});
+					$(function() {
+						$('#sidebarAccordion').on(
+								'show.bs.collapse',
+								function(e) {
+									$(e.target).parent('.panel-default')
+											.addClass('active');
+								});
+						$('#sidebarAccordion').on(
+								'shown.bs.collapse',
+								function(e) {
+									$(e.target).parent('.panel-default')
+											.addClass('active');
+								});
+						$('#sidebarAccordion').on(
+								'hidden.bs.collapse',
+								function(e) {
+									$(this).find('.panel-default').not(
+											$(e.target)).removeClass('active');
+								})
+					});
+					$('[data-parent="#sidebarAccordion"]').click(function() {
+						if (!$('.row-offcanvas').hasClass('active')) {
+							$('.row-offcanvas').addClass('active');
+						}
+					});
+				});
+	</script>
+</body>
+</html>
