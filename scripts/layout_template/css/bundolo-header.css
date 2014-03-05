@@ -1,9 +1,11 @@
 .navbar button, .navbar input {
 	border-radius: 15px;
+	font-size: 10px;
+	padding: 4px 8px;
+	height: auto;
 }
 
 .navbar .navbar-header {
-	/*background: none transparent;*/
 	margin: 0 40px;
 }
 
@@ -22,4 +24,18 @@
 
 .navbar-brand pre:hover, .navbar-brand pre:focus {
 	color: #fff;
+}
+
+.navbar-form {
+	padding: 5px 24px 5px 0;
+}
+
+@media (max-width: 978px) {
+    .navbar .navbar-header {
+		margin: 0 0 0 8px;
+	}
+	.navbar .navbar-nav>li>a {
+		padding: 15px 4px;
+		font-size: 10px;
+	}
 }
