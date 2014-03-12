@@ -81,28 +81,26 @@
 	margin: 0;
 }
 
-.sidebar .panel-default>span {
-	margin-left: -80px;
-	background: url('../images/circle.png') no-repeat center;
+.sidebar .panel-default>.fa-stack {
 	width: 40px;
-	height: 42px;	
+	text-align: center;
+	color: #000;
+	font-size: 24px;
+	
 }
 
-.sidebar .panel-default>span:hover {
+.sidebar .panel-default>.fa-stack>i {
+z-index: 2;
+}
+
+.sidebar .panel-default>.fa-stack:hover {
 	cursor: pointer;
 	transform: scale(1.2,1.2);
 	-ms-transform: scale(1.2,1.2);
 	-webkit-transform: scale(1.2,1.2);
 }
 
-
-
-.sidebar .panel-default.active>span {
-	background: url('../images/circle_pipe_h.png') no-repeat top left;
-}
-
-.sidebar .panel-default.active>span:hover {
-	/*cursor: default; */
+.sidebar .panel-default.active>.fa-stack:hover {
 	transform: none;
 	-ms-transform: none;
 	-webkit-transform: none;
@@ -227,4 +225,18 @@
 .sidebar .panel-default>span.serials_button {
 	margin-left: -80px; 
 	width: 65px;
+}
+
+.pipe_hr {
+	position: absolute;
+    right: 0px;
+    top: 31%;
+    height: 38%;
+    width: 50%;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.active>span>.pipe_hr {
+	background-color: #000;
 }
