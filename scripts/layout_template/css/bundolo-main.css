@@ -23,6 +23,7 @@ footer {
 	/*padding-left: 40px;
 	padding-right: 40px;*/
 	width: 70.5%;
+	min-height: 240px;
 }
 
 .active .main {
@@ -55,7 +56,7 @@ footer {
 }
 
 .main .jumbotron {
-	padding: 40px;
+	padding: 40px 40px 0 40px;
 	margin: 0;
 	/*min-height: 451px;*/ /* this is sidebar height, to make slider go under it */
 	background-color: #fff;
@@ -77,9 +78,20 @@ footer {
 /*.main */.slider {
 	padding: 0 0 0 40px;
 	width: 70%;
+	float:left;
 }
 
 .active /*.main*/ .slider {
 	padding-right: 40px;
 	width: 100%;
+}
+
+.navbar button, .navbar button:hover, .navbar button:focus, .navbar button:active, .navbar button:active:focus,
+.context-button, .context-button:hover, .context-button:focus, .context-button:active, .context-button:active:focus {
+	padding: 4px 0 0 0;
+	border: none;
+	background: none transparent;
+	box-shadow: none;
+	outline: none;
+	text-shadow: none;
 }
