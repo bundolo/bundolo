@@ -2,14 +2,13 @@
     position: absolute;
     display:none;
     background-color: #fff;
-    width: 200px;
-    min-height: 50px;
-    max-height: 300px;
+    width: 300px;    
     border-radius: 25px;
 	-webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
 	padding: 15px;
 	background: #000;
+	z-index: 1030;
 }
 
 .context-menu>div {
@@ -19,16 +18,54 @@
 	border-radius: 15px;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
+	padding: 13px 0;
 }
 
-.panel-heading .accordion-toggle:after {
+.context-menu>div>div {
+	min-height: 50px;
+    max-height: 300px;
+	overflow-y: auto;
+}
+
+.context-menu .panel-heading .accordion-toggle:after {
     /* symbol for "opening" panels */
     font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
     content: "\e114";    /* adjust as needed, taken from bootstrap.css */
     float: right;        /* adjust as needed */
     color: grey;         /* adjust as needed */
 }
-.panel-heading .accordion-toggle.collapsed:after {
+.context-menu .panel-heading .accordion-toggle.collapsed:after {
     /* symbol for "collapsed" panels */
     content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+.context-menu .panel+.panel {
+	margin: 0;
+}
+
+.context-menu .panel-body {
+	padding: 0;
+}
+
+.context-menu .panel-default {
+	border: none;
+}
+
+.context-menu .panel-group {
+	margin: 0;
+	padding-left: 10px;
+}
+
+.context-menu .panel-heading {
+	background: none;
+	padding: 0;
+	border: none;
+}
+
+.panel-group .panel-heading+.panel-collapse .panel-body {
+	border: none;
+}
+
+.context-menu span.accordion-toggle:hover {
+	cursor: pointer;
 }
