@@ -160,15 +160,17 @@ z-index: 2;
 	padding-bottom: 0;
 }
 
-.sidebar .btn,.sidebar input {
+.sidebar .btn, .sidebar input {
 	padding: 0 2px;
 	height: 22px;
 }
 
-.sidebar .input-group input {
+.sidebar .panel-heading input {
 	width: 60%;
+	text-align: right;
 }
 
+/*
 .sidebar .bootstrap-select {
 	margin: 0;
 	float: right !important;
@@ -182,6 +184,7 @@ z-index: 2;
 	{
 	margin-right: 20px;
 }
+*/
 
 .sidebar .dropdown-menu>li>a {
 	padding: 3px 4px 3px 10px;

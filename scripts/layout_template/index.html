@@ -11,8 +11,6 @@
 <!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-<link rel="stylesheet" type="text/css"
-	href="css/bootstrap-select.min.css">
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 <link
@@ -130,16 +128,9 @@ b::::::b                                                          d::::::d      
 						<div class="panel-heading">
 							<a href="#collapseTexts" data-parent="#sidebarAccordion"
 								data-toggle="collapse" class="accordion-toggle collapsed">Texts</a>
-							<div class="input-group pull-right">
-								<input class="form-control" type="text" value="" placeholder=""
-									name="q"> <select class="selectpicker" multiple
-									data-selected-text-format="count" title="Search by"
-									data-width="40%">
-									<option title="Search by Title">Title</option>
-									<option title="Search by Author">Author</option>
-									<option title="Search by Date">Date</option>
-								</select>
-							</div>
+								<input data-parent="#sidebarAccordion" data-target="#collapseTexts"
+						data-toggle="collapse" class="form-control pull-right" type="search" value="" placeholder="Search"
+									name="q">
 						</div>
 						<div class="panel-collapse collapse" id="collapseTexts">
 							<div class="panel-body">
@@ -194,16 +185,9 @@ b::::::b                                                          d::::::d      
 						<div class="panel-heading">
 							<a href="#collapseSerials" data-parent="#sidebarAccordion"
 								data-toggle="collapse" class="accordion-toggle collapsed">Serials</a>
-							<div class="input-group pull-right">
-								<input class="form-control" type="text" value="" placeholder=""
-									name="q"> <select class="selectpicker" multiple
-									data-selected-text-format="count" title="Search by"
-									data-width="40%">
-									<option title="Search by Title">Title</option>
-									<option title="Search by Author">Author</option>
-									<option title="Search by Date">Date</option>
-								</select>
-							</div>
+							<input data-parent="#sidebarAccordion" data-target="#collapseSerials"
+						data-toggle="collapse" class="form-control pull-right" type="search" value="" placeholder="Search"
+									name="q">
 						</div>
 						<div class="panel-collapse collapse" id="collapseSerials">
 							<div class="panel-body">
@@ -257,16 +241,9 @@ b::::::b                                                          d::::::d      
 						<div class="panel-heading">
 							<a href="#collapseAuthors" data-parent="#sidebarAccordion"
 								data-toggle="collapse" class="accordion-toggle collapsed">Authors</a>
-							<div class="input-group pull-right">
-								<input class="form-control" type="text" value="" placeholder=""
-									name="q"> <select class="selectpicker" multiple
-									data-selected-text-format="count" title="Search by"
-									data-width="40%">
-									<option title="Search by Name">Name</option>
-									<option title="Search by Date">Date</option>
-									<option title="Search by Title">Title</option>
-								</select>
-							</div>
+							<input data-parent="#sidebarAccordion" data-target="#collapseAuthors"
+						data-toggle="collapse" class="form-control pull-right" type="search" value="" placeholder="Search"
+									name="q">
 						</div>
 						<div class="panel-collapse collapse" id="collapseAuthors">
 							<div class="panel-body">
@@ -320,16 +297,9 @@ b::::::b                                                          d::::::d      
 						<div class="panel-heading">
 							<a href="#collapseNews" data-parent="#sidebarAccordion"
 								data-toggle="collapse" class="accordion-toggle collapsed">News</a>
-							<div class="input-group pull-right">
-								<input class="form-control" type="text" value="" placeholder=""
-									name="q"> <select class="selectpicker" multiple
-									data-selected-text-format="count" title="Search by"
-									data-width="40%">
-									<option title="Search by Title">Title</option>
-									<option title="Search by Content">Content</option>
-									<option title="Search by Date">Date</option>
-								</select>
-							</div>
+							<input data-parent="#sidebarAccordion" data-target="#collapseNews"
+						data-toggle="collapse" class="form-control pull-right" type="search" value="" placeholder="Search"
+									name="q">
 						</div>
 						<div class="panel-collapse collapse" id="collapseNews">
 							<div class="panel-body">
@@ -383,16 +353,9 @@ b::::::b                                                          d::::::d      
 						<div class="panel-heading">
 							<a href="#collapseForum" data-parent="#sidebarAccordion"
 								data-toggle="collapse" class="accordion-toggle collapsed">Forum</a>
-							<div class="input-group pull-right">
-								<input class="form-control" type="text" value="" placeholder=""
-									name="q"> <select class="selectpicker" multiple
-									data-selected-text-format="count" title="Search by"
-									data-width="40%">
-									<option title="Search by Content">Content</option>
-									<option title="Search by Author">Author</option>
-									<option title="Search by Date">Date</option>
-								</select>
-							</div>
+							<input data-parent="#sidebarAccordion" data-target="#collapseForum"
+						data-toggle="collapse" class="form-control pull-right" type="search" value="" placeholder="Search"
+									name="q">
 						</div>
 						<div class="panel-collapse collapse" id="collapseForum">
 							<div class="panel-body">
@@ -446,16 +409,9 @@ b::::::b                                                          d::::::d      
 						<div class="panel-heading">
 							<a href="#collapseContests" data-parent="#sidebarAccordion"
 								data-toggle="collapse" class="accordion-toggle collapsed">Contests</a>
-							<div class="input-group pull-right">
-								<input class="form-control" type="text" value="" placeholder=""
-									name="q"> <select class="selectpicker" multiple
-									data-selected-text-format="count" title="Search by"
-									data-width="40%">
-									<option title="Search by Title">Title</option>
-									<option title="Search by Content">Content</option>
-									<option title="Search by Date">Date</option>
-								</select>
-							</div>
+							<input data-parent="#sidebarAccordion" data-target="#collapseContests"
+						data-toggle="collapse" class="form-control pull-right" type="search" value="" placeholder="Search"
+									name="q">
 						</div>
 						<div class="panel-collapse collapse" id="collapseContests">
 							<div class="panel-body">
@@ -509,16 +465,9 @@ b::::::b                                                          d::::::d      
 						<div class="panel-heading">
 							<a href="#collapseConnections" data-parent="#sidebarAccordion"
 								data-toggle="collapse" class="accordion-toggle collapsed">Connections</a>
-							<div class="input-group pull-right">
-								<input class="form-control" type="text" value="" placeholder=""
-									name="q"> <select class="selectpicker" multiple
-									data-selected-text-format="count" title="Search by"
-									data-width="40%">
-									<option title="Search by Title">Title</option>
-									<option title="Search by Content">Content</option>
-									<option title="Search by Date">Date</option>
-								</select>
-							</div>
+							<input data-parent="#sidebarAccordion" data-target="#collapseConnections"
+						data-toggle="collapse" class="form-control pull-right" type="search" value="" placeholder="Search"
+									name="q">
 						</div>
 						<div class="panel-collapse collapse" id="collapseConnections">
 							<div class="panel-body">
@@ -569,12 +518,12 @@ b::::::b                                                          d::::::d      
 				<!--  -->
 			</div>
 			<div class="main">
-				<p class="pull-right">
+				<!-- <p class="pull-right">
 					<button type="button" class="btn btn-default btn-xs"
 						data-toggle="offcanvas">
 						<i class="fa fa-chevron-left"></i>
 					</button>
-				</p>
+				</p>-->
 				<div class="jumbotron">
 					<pre>
 bbbbbbbb                                                          dddddddd                                          
@@ -1389,20 +1338,10 @@ b::::::b                                                          d::::::d      
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script
 		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
 	<script type="text/javascript"
 		src="js/jquery.tablesorter.widgets.min.js"></script>
 	<script src="js/bundolo.js"></script>
-
-	<script type="text/javascript">
-		$(window).on('load', function() {
-			$('.selectpicker').selectpicker({
-				countSelectedText : 'Search by {0}'
-			});
-			$('.selectpicker').selectpicker('selectAll');
-		});
-	</script>
 	<script type="text/javascript">
 		$(document).ready(
 				function() {
@@ -1438,15 +1377,18 @@ b::::::b                                                          d::::::d      
 								})
 					});
 					$('[data-parent="#sidebarAccordion"]').click(function() {
+						//click on sidebar buttons
 						if (!$('.row-offcanvas').hasClass('active')) {
 							$('.row-offcanvas').addClass('active');
 						}
 					});
-					$('.sidebar [title]').click(function() {
-						if (!$('.row-offcanvas').hasClass('active')) {
-							$('.row-offcanvas').addClass('active');
-						}
-					});
+					/* TODO
+					this was added to open accordion od search box focus, but it enabled more than one accordion to be open
+					setting collapse toggling in input tag works, but it also enables closing accordion on second focus on the same field
+					$('.sidebar input[type="search"]').focus(function(event) {
+						$('.sidebar .panel-collapse').collapse('hide');
+						$(this).closest('.panel').find('.panel-collapse').collapse('show');						
+					});*/
 					$('[title]').hover(
 							function() {
 								$('.status_bar>div').text($(this).attr('title'));
