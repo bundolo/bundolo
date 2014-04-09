@@ -95,3 +95,7 @@ footer {
 	outline: none;
 	text-shadow: none;
 }
+
+.main.text {
+	display: hidden;
+}
