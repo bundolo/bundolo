@@ -57,7 +57,7 @@ b::::::b                                                          d::::::d      
 					</span>
 				</button>
 				<span class="pipe_h"></span>
-				<button type="button" class="btn btn-default" title="Contact us">
+				<button type="button" class="btn btn-default" title="Contact">
 					<span class="fa-stack fa-2x">
 						<i class="fa fa-circle fa-stack-2x"></i>
 						<i class="fa fa-question fa-stack-1x fa-inverse"></i>
@@ -68,44 +68,128 @@ b::::::b                                                          d::::::d      
 			</div>
 			<div class="collapse navbar-collapse">
 				<form class="navbar-form form-inline navbar-right" role="form">
-					<button type="submit" class="btn btn-default" title="Register">
-						<span class="fa-stack fa-2x">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-male fa-stack-1x fa-inverse"></i>
-						</span>
-					</button>
-					<span class="pipe_h"></span>
-					<button type="submit" class="btn btn-default" title="Password reset">
-						<span class="fa-stack fa-2x">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-key fa-stack-1x fa-inverse"></i>
-						</span>
-					</button>
-					<span class="pipe_h"></span>
-					<div class="form-group" title="Username">
-						<label class="sr-only" for="username">Username or Email</label> <input
-							type="email" class="form-control" id="username"
-							placeholder="Username or Email">
+					<div class="login show">
+						<button type="button" class="btn btn-default" title="Register" id="login_register">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-male fa-stack-1x fa-inverse"></i>
+							</span>
+						</button>
+						<span class="pipe_h"></span>
+						<button type="button" class="btn btn-default" title="Password reset" id="login_reset">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-key fa-stack-1x fa-inverse"></i>
+							</span>
+						</button>
+						<span class="pipe_h"></span>
+						<div class="form-group" title="Username">
+							<label class="sr-only" for="login_username">Username or Email</label>
+							<input type="email" class="form-control" id="login_username" placeholder="Username">
+						</div>
+						<span class="pipe_h"></span>
+						<div class="form-group" title="Password">
+							<label class="sr-only" for="login_password">Password</label>
+							<input type="password" class="form-control" id="login_password" placeholder="Password">
+						</div>
+						<span class="pipe_h"></span>
+						<div class="checkbox" title="Remember me">
+							<span>
+								<label class="sr-only" for="login_remember">Remember me</label>
+								<input type="checkbox" value="on" id="login_remember" tabindex="0">
+							</span>
+						</div>
+						<span class="pipe_h"></span>					
+						<button type="button" class="btn btn-default" title="Login" id="login_login">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-sign-in fa-stack-1x fa-inverse"></i>
+							</span>
+						</button>
 					</div>
-					<span class="pipe_h"></span>
-					<div class="form-group" title="Password">
-						<label class="sr-only" for="password">Password</label> <input
-							type="password" class="form-control" id="password"
-							placeholder="Password">
+					<div class="register hidden">
+						<div class="form-group" title="Username">
+							<label class="sr-only" for="register_username">Username</label>
+							<input type="text" class="form-control" id="register_username" placeholder="Username">
+						</div>
+						<span class="pipe_h"></span>
+						<div class="form-group" title="Email">
+							<label class="sr-only" for="register_email">Email</label>
+							<input type="email" class="form-control" id="register_email" placeholder="Email">
+						</div>
+						<span class="pipe_h"></span>
+						<div class="form-group" title="Password">
+							<label class="sr-only" for="register_password">Password</label>
+							<input type="password" class="form-control" id="register_password" placeholder="Password">
+						</div>
+						<span class="pipe_h"></span>
+						<button type="button" class="btn btn-default" title="Register" id="register_register">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-check fa-stack-1x fa-inverse"></i>
+							</span>
+						</button>
+						<span class="pipe_h"></span>					
+						<button type="button" class="btn btn-default" title="Cancel" id="register_cancel">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-times fa-stack-1x fa-inverse"></i>
+							</span>
+						</button>
 					</div>
-					<span class="pipe_h"></span>
-					<div class="checkbox" title="Remember me">
-						<span><input type="checkbox" value="on"
-							id="remember" tabindex="0"><label class="sr-only"
-							for="remember">Remember me</label></span>
+					<div class="logout hidden">
+						<button type="button" class="btn btn-default" title="Profile" id="logout_profile">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+							</span>
+						</button>
+						<span class="pipe_h"></span>
+						<button type="button" class="btn btn-default" title="Statistics" id="logout_statistics">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-bar-chart-o fa-stack-1x fa-inverse"></i>
+							</span>
+						</button>
+						<span class="pipe_h"></span>
+						<div class="form-group username_bar" title="Username">
+							<div>
+								Kiloster
+							</div>
+						</div>
+						<span class="pipe_h"></span>
+						<button type="button" class="btn btn-default" title="Logout" id="logout_logout">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
+							</span>
+						</button>
 					</div>
-					<span class="pipe_h"></span>					
-					<button type="submit" class="btn btn-default" title="Login">
-						<span class="fa-stack fa-2x">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-sign-in fa-stack-1x fa-inverse"></i>
-						</span>
-					</button>
+					<div class="reset hidden">
+						<div class="form-group" title="Username">
+							<label class="sr-only" for="reset_username">Username</label>
+							<input type="email" class="form-control" id="reset_username" placeholder="Username">
+						</div>
+						<span class="pipe_h"></span>
+						<div class="form-group" title="Email">
+							<label class="sr-only" for="reset_email">Email</label>
+							<input type="email" class="form-control" id="reset_email" placeholder="Email">
+						</div>
+						<span class="pipe_h"></span>
+						<button type="button" class="btn btn-default" title="Reset" id="reset_reset">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-check fa-stack-1x fa-inverse"></i>
+							</span>
+						</button>
+						<span class="pipe_h"></span>					
+						<button type="button" class="btn btn-default" title="Cancel" id="reset_cancel">
+							<span class="fa-stack fa-2x">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-times fa-stack-1x fa-inverse"></i>
+							</span>
+						</button>
+					</div>
 				</form>
 			</div>
 		</div>
@@ -113,13 +197,6 @@ b::::::b                                                          d::::::d      
 	<div class="container">
 		<div class="row row-offcanvas">
 			<div class="sidebar pull-right" id="sidebar" role="navigation">
-				<div class="clearfix">
-					<button type="button" class="btn btn-default btn-xs pull-right"
-						data-toggle="offcanvas">
-						<i class="fa fa-chevron-right"></i>
-					</button>
-				</div>
-				<!--  -->
 				<ul id="sidebarAccordion" class="sidebar-nav panel-group">
 					<li class="panel panel-default"><span title="Texts"
 						data-parent="#sidebarAccordion" data-target="#collapseTexts"
@@ -515,7 +592,6 @@ b::::::b                                                          d::::::d      
 							</div>
 						</div></li>
 				</ul>
-				<!--  -->
 			</div>
 			<div class="main">
 				<!-- <p class="pull-right">
@@ -1342,151 +1418,8 @@ b::::::b                                                          d::::::d      
 	<script type="text/javascript"
 		src="js/jquery.tablesorter.widgets.min.js"></script>
 	<script src="js/bundolo.js"></script>
-	<script type="text/javascript">
-		$(document).ready(
-				function() {
-					$(function() {
-						$(".tablesorter").tablesorter({
-							theme : 'bootstrap',
-							headerTemplate : '{content} {icon}',
-							widgets : [ 'zebra', 'columns', 'uitheme', 'filter' ],
-							sortList : [ [ 0, 0 ], [ 1, 0 ] ],
-							filter_cssFilter  : 'tablesorter-filter',
-					        filter_startsWith : false,
-					        filter_ignoreCase : true
-						});
-					});
-					$(function() {
-						$('#sidebarAccordion').on(
-								'show.bs.collapse',
-								function(e) {
-									$(e.target).parent('.panel-default')
-											.addClass('active');
-								});
-						$('#sidebarAccordion').on(
-								'shown.bs.collapse',
-								function(e) {
-									$(e.target).parent('.panel-default')
-											.addClass('active');
-								});
-						$('#sidebarAccordion').on(
-								'hidden.bs.collapse',
-								function(e) {
-									$(this).find('.panel-default').not(
-											$(e.target)).removeClass('active');
-								})
-					});
-					$('[data-parent="#sidebarAccordion"]').click(function() {
-						//click on sidebar buttons
-						if (!$('.row-offcanvas').hasClass('active')) {
-							$('.row-offcanvas').addClass('active');
-						}
-					});
-					/* TODO
-					this was added to open accordion od search box focus, but it enabled more than one accordion to be open
-					setting collapse toggling in input tag works, but it also enables closing accordion on second focus on the same field
-					$('.sidebar input[type="search"]').focus(function(event) {
-						$('.sidebar .panel-collapse').collapse('hide');
-						$(this).closest('.panel').find('.panel-collapse').collapse('show');						
-					});*/
-					$('[title]').hover(
-							function() {
-								$('.status_bar>div').text($(this).attr('title'));
-							}, function() {
-								$('.status_bar>div').text('');
-							}
-					);
-					
-					$('.context-button').click(function(e) {
-						setContextMenuPostion(e, $('.context-menu'));				        
-				        return false;
-				    });
-				    $(document).click(function(event) { 
-				        if($(event.target).parents().index($('.context-menu')) == -1) {
-				            if($('.context-menu').is(":visible")) {
-				                $('.context-menu').hide()
-				            }
-				        }        
-				    })
-				    $('.sidebar .table>tbody>tr').click(function() {
-				    	displayDummyText();
-				    });
-				    $('.sidebar .table>tbody>tr').hover(
-			    		function() {
-			    			$(this).find('td').addClass( "hover" );
-			    		}, function() {
-			    			$(this).find('td').removeClass( "hover" );
-			    		}
-				   );
-				});
-		
-		function setContextMenuPostion(event, contextMenu) {
-
-		    var mousePosition = {};
-		    var menuPostion = {};
-		    var menuDimension = {};
-
-		    menuDimension.x = contextMenu.outerWidth();
-		    menuDimension.y = contextMenu.outerHeight();
-		    mousePosition.x = event.pageX;
-		    mousePosition.y = event.pageY;
-
-		    if (mousePosition.x + menuDimension.x > $(window).width() + $(window).scrollLeft()) {
-		        menuPostion.x = mousePosition.x - menuDimension.x;
-		    } else {
-		        menuPostion.x = mousePosition.x;
-		    }
-
-		    if (mousePosition.y + menuDimension.y > $(window).height() + $(window).scrollTop()) {
-		        menuPostion.y = mousePosition.y - menuDimension.y;
-		    } else {
-		        menuPostion.y = mousePosition.y;
-		    }
-
-		    contextMenu.css({
-	            display: "block",
-	            left: menuPostion.x,
-	            top: menuPostion.y
-	        });
-		    return menuPostion;
-		}
-		
-		function displayDummyText() {
-			$(".main").html('<div class="jumbotron">\
-			<h1>text title</h1>\
-				<p>Combtooth blenny houndshark clown triggerfish paperbone,\
-					"European eel tilapia sea snail tilapia waryfish," Bitterling\
-					crocodile shark. Flagblenny Hammerjaw stonecat freshwater herring\
-					false brotula false moray; kanyu Atlantic eel blue triggerfish\
-					weeverfish Rainbowfish leaffish. Rudderfish alligatorfish,\
-					Billfish gray reef shark Razorback sucker flounder quillback;\
-					clownfish medusafish Atlantic trout? Gouramie bichir frilled shark\
-					dragonet spiny dogfish cuckoo wrasse. kanyu Atlantic eel blue triggerfish\
-					weeverfish Rainbowfish leaffish. Rudderfish alligatorfish,\
-					Billfish gray reef shark Razorback sucker flounder quillback;\
-					clownfish medusafish Atlantic trout? Gouramie bichir frilled shark\
-					dragonet spiny dogfish cuckoo wrasse.</p>\
-				<p>Combtooth blenny houndshark clown triggerfish paperbone,\
-					"European eel tilapia sea snail tilapia waryfish," Bitterling\
-					crocodile shark. Flagblenny Hammerjaw stonecat freshwater herring\
-					false brotula false moray; kanyu Atlantic eel blue triggerfish\
-					weeverfish Rainbowfish leaffish. Rudderfish alligatorfish,\
-					Billfish gray reef shark Razorback sucker flounder quillback;\
-					clownfish medusafish Atlantic trout? Gouramie bichir frilled shark\
-					dragonet spiny dogfish cuckoo wrasse. kanyu Atlantic eel blue triggerfish\
-					weeverfish Rainbowfish leaffish. Rudderfish alligatorfish,\
-					Billfish gray reef shark Razorback sucker flounder quillback;\
-					clownfish medusafish Atlantic trout? Gouramie bichir frilled shark\
-					dragonet spiny dogfish cuckoo wrasse.</p>\
-				<button type="button" class="btn btn-default context-button" title="Comments">\
-					<span class="fa-stack">\
-						<i class="fa fa-circle fa-stack-2x"></i>\
-						<i class="fa fa-info fa-stack-1x fa-inverse"></i>\
-					</span>\
-				</button>\
-			</div>');
-			
-		}
-	</script>
+	<script src="js/bundolo-header.js"></script>
+	<script src="js/bundolo-context.js"></script>
+	<script src="js/bundolo-sidebar.js"></script>
 </body>
 </html>
