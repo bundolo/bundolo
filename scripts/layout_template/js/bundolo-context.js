@@ -15,17 +15,23 @@ $(document).ready(function() {
             }
         }        
     })
+    $('.comments-button').attr("title", "Comments");
+	$('[title]').hover(
+		function() {
+			$('.status_bar>div').text($(this).attr('title'));
+		}, function() {
+			$('.status_bar>div').text('');
+		}
+	);
     $('.comments-button').hover(
     	function() {
     		$(this).parent().addClass("hover");
     		if ($(this).parent().parent().css("overflow")=="hidden") {
     			$(this).parent().parent().addClass("show-overflow");
     		}
-    		//alert("in: "+$(this).parent().attr("class"));
     	}, function() {
     		$(this).parent().removeClass("hover");
     		$(this).parent().parent().removeClass("show-overflow");
-    		//alert("out: "+$(this).parent().attr("class"));
     	}
     );
 });

@@ -1,15 +1,7 @@
 $(document).ready(function() {
   $('[data-toggle=offcanvas]').click(function() {
     $('.row-offcanvas').toggleClass('active');
-  });
-  $('.content').attr("title", "Comments");
-  $('[title]').hover(
-    function() {
-		$('.status_bar>div').text($(this).attr('title'));
-	}, function() {
-		$('.status_bar>div').text('');
-	}
-  );
+  });  
 });
 
 function displayDummyText() {
