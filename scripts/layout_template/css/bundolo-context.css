@@ -69,3 +69,27 @@
 .context-menu span.accordion-toggle:hover {
 	cursor: pointer;
 }
+
+.content {
+	position:relative;
+}
+.content .comments-button {
+	position:absolute;
+	top:6px;
+	right:3px;
+	font-size: 10px;
+	color: #000;
+	cursor: pointer;
+}
+.content .comments-button:hover {
+	transform: scale(1.2,1.2);
+	-ms-transform: scale(1.2,1.2);
+	-webkit-transform: scale(1.2,1.2);
+}
+.content.hover {
+	outline: 1px dashed;
+	/*outline: 1px invert dashed;*/ /*invert seems to fail in mozilla, if color is not set, it defaults to invert*/
+}
+.show-overflow {
+	overflow: visible;
+}

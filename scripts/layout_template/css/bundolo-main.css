@@ -86,8 +86,7 @@ footer {
 	width: 100%;
 }
 
-.navbar button, .navbar button:hover, .navbar button:focus, .navbar button:active, .navbar button:active:focus,
-.context-button, .context-button:hover, .context-button:focus, .context-button:active, .context-button:active:focus {
+.navbar button, .navbar button:hover, .navbar button:focus, .navbar button:active, .navbar button:active:focus {
 	padding: 4px 0 0 0;
 	border: none;
 	background: none transparent;
