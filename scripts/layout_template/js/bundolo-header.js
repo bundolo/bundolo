@@ -23,7 +23,7 @@ $(document).ready(function() {
 		displayDummyText();
 	});
 	$('#logout_statistics').click(function() {
-		displayDummyText();
+		addText();
 	});
 	$('#logout_logout').click(function() {
 		$('.logout').removeClass('show').addClass('hidden');

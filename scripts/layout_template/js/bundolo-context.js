@@ -1,8 +1,9 @@
+var commentParentElement;
+//TODO these variables could probably be removed
 var accordionCounter = 0;
 var commentCounter = 0;
-var dummyCommentCounter = 0;
 $(document).ready(function() {
-
+	
 });
 
 function setContextMenuPostion(event, contextMenu) {
@@ -38,8 +39,10 @@ function setContextMenuPostion(event, contextMenu) {
 function addContextMenu(parentElement) {
 	var contextMenu =  $('<div class="context-menu panel-group" id="accordion' + accordionCounter++ + '"><div><div></div></div></div>');
 	//close context menu if it is open and there has been a click outside of it
-	$(document).click(function(event) { 
-        if($(event.target).parents().index(contextMenu) == -1) {
+	$(document).click(function(event) {
+		var modalDialog = $('#modal');
+		var targetParents = $(event.target).parents();
+		if ((targetParents.index(modalDialog) == -1) && !modalDialog.hasClass('in') && (targetParents.index(contextMenu) == -1)) {
             if(contextMenu.is(":visible")) {
             	contextMenu.hide()
             }
@@ -48,7 +51,7 @@ function addContextMenu(parentElement) {
 	var commentsRoot = contextMenu.find("div>div");
 	var rootCommentButton = addCommentButton(commentsRoot, commentsRoot);
 	rootCommentButton.click(function(e) {
-		addComment(commentsRoot, 'comment'+commentCounter++);
+		addComment(commentsRoot);
         return false;
     });
 	$('body').append(contextMenu);
@@ -78,20 +81,25 @@ function addContextMenu(parentElement) {
 	
 }
 
-function addComment(parentElement, commentText) {
-	var comment = $('<div class="panel panel-default comment" id="comment'+commentCounter+'"></div>');
-	var commentContent = $('<div class="panel-heading"><span>'+commentText+'</span></div><div id="collapse1" class="panel-collapse"><div class="panel-body"><div class="panel-group" id="accordion1"><div><div></div></div></div></div></div>');
+function addComment(parentElement) {
+	$('#modal').addClass("edit-comment");
+	//TODO this can probably be nicer. we are supposed to pass variable to the click event of an element inside modal we are showing
+	commentParentElement = parentElement;
+	$('#modal').modal('show');
+}
+
+function saveComment(commentContent) {
+	//TODO validation
+	var comment = $('<div class="panel panel-default comment" id="comment'+commentCounter+++'"></div>');
+	var commentContent = $('<div class="panel-heading"><span>'+commentContent+'</span></div><div id="collapse1" class="panel-collapse"><div class="panel-body"><div class="panel-group" id="accordion1"><div><div></div></div></div></div></div>');
 	var commentCommentButton = addCommentButton(comment);
 	comment.append(commentContent);
-	parentElement.append(comment);
+	commentParentElement.append(comment);
 	commentCommentButton.click(function(e) {
-		addComment(comment.find(">.panel-collapse>div>div>div>div"), 'comment'+commentCounter+++" "+Math.random() + " "+Math.random());
+		addComment(comment.find(">.panel-collapse>div>div>div>div"));
         return false;
     });
-	if(dummyCommentCounter-- >0) {
-	//TODO remove this after testing is done
-		commentCommentButton.click();
-	}
+	$('#modal').modal('hide');
 }
 
 function addCommentButton(parentElement) {

@@ -1,0 +1,20 @@
+.modal>div {
+    background-color: #fff;
+    border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	padding: 15px;
+	background: #000;
+}
+
+.modal>div>div {
+	background: #fff;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	padding: 13px 0;	
+}
+
+.edit-comment .title, .edit-comment .description {
+	display: none;
+}
