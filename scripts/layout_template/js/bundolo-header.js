@@ -22,7 +22,8 @@ $(document).ready(function() {
 	$('#logout_profile').click(function() {
 		displayDummyText();
 	});
-	$('#logout_statistics').click(function() {
+	$('#logout_add').click(function() {
+		//TODO show modal with dropdown of all types of content, defaulting to text
 		addText();
 	});
 	$('#logout_logout').click(function() {

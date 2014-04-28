@@ -40,13 +40,6 @@ $(document).ready(function() {
 	$('.sidebar .table>tbody>tr').click(function() {
     	displayDummyText();
     });
-    $('.sidebar .table>tbody>tr').hover(
-		function() {
-			$(this).find('td').addClass( "hover" );
-		}, function() {
-			$(this).find('td').removeClass( "hover" );
-		}
-   );
 });
 
 function preventSidebarToggle(element, event) {

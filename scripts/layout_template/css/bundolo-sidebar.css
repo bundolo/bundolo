@@ -147,27 +147,6 @@ z-index: 2;
 	text-align: right;
 }
 
-.sidebar .tablesorter-bootstrap .tablesorter-header {
-	margin: 0;
-}
-
-.sidebar .table>thead>tr>th {
-	border: 0;
-}
-
-.sidebar .table>tbody>tr:hover {
-	cursor: pointer;
-	
-}
-.sidebar .table>tbody>tr>td.hover {
-	background-color: red;	
-}
-
-.sidebar .tablesorter-bootstrap .tablesorter-header-inner {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
 .sidebar .btn, .sidebar input {
 	padding: 0 2px;
 	height: 22px;
