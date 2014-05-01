@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$('.main a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+		//TODO fix this
 		$('.main p').addClass("hidden");
 	});
 });
@@ -14,32 +15,29 @@ function savePost(postContent) {
 	displayText(textTitle, textDescription, textContent);
 	$('#modal').modal('hide');
 }
-function displayTopic(textTitle, textDescription, textContent) {
-	displayContent($(".main>.jumbotron>.content"), '<h1>'+textTitle+'</h1><h3>'+textDescription+'</h3>' + textContent);
+function displayForum() {
+	$.get('templates/forum.html', function(template) {
+	    var rendered = Mustache.render(template, {
+			  "categories": [
+			 			    { "title": "Literature", "id" : "literature" },
+			 			    { "title": "Bundolo", "id" : "bundolo" },
+			 			    { "title": "Various", "id" : "various" },
+			 			    { "title": "Suggestions", "id" : "suggestions" },
+			 			    { "title": "Archive", "id" : "archive" }
+			 			  ]
+			 			});
+	    displayContent($(".main>.jumbotron>.content"), rendered);
+	    $('.main table>tbody>tr').click(function() {
+			displayDummyTopic();
+		});
+	  });
+}
+function displayTopic(title) {
+	$.get('templates/topic.html', function(template) {
+	    var rendered = Mustache.render(template, {"title": title});
+	    displayContent($(".main>.jumbotron>.content"), rendered);
+	  });
 }
 function displayDummyTopic() {
-	displayText('Razorback sucker', 'dragonet spiny dogfish cuckoo wrasse', '<p>Combtooth blenny houndshark clown triggerfish paperbone,\
-			"European eel tilapia sea snail tilapia waryfish," Bitterling\
-			crocodile shark. Flagblenny Hammerjaw stonecat freshwater herring\
-			false brotula false moray; kanyu Atlantic eel blue triggerfish\
-			weeverfish Rainbowfish leaffish. Rudderfish alligatorfish,\
-			Billfish gray reef shark Razorback sucker flounder quillback;\
-			clownfish medusafish Atlantic trout? Gouramie bichir frilled shark\
-			dragonet spiny dogfish cuckoo wrasse. kanyu Atlantic eel blue triggerfish\
-			weeverfish Rainbowfish leaffish. Rudderfish alligatorfish,\
-			Billfish gray reef shark Razorback sucker flounder quillback;\
-			clownfish medusafish Atlantic trout? Gouramie bichir frilled shark\
-			dragonet spiny dogfish cuckoo wrasse.</p>\
-		<p>Combtooth blenny houndshark clown triggerfish paperbone,\
-			"European eel tilapia sea snail tilapia waryfish," Bitterling\
-			crocodile shark. Flagblenny Hammerjaw stonecat freshwater herring\
-			false brotula false moray; kanyu Atlantic eel blue triggerfish\
-			weeverfish Rainbowfish leaffish. Rudderfish alligatorfish,\
-			Billfish gray reef shark Razorback sucker flounder quillback;\
-			clownfish medusafish Atlantic trout? Gouramie bichir frilled shark\
-			dragonet spiny dogfish cuckoo wrasse. kanyu Atlantic eel blue triggerfish\
-			weeverfish Rainbowfish leaffish. Rudderfish alligatorfish,\
-			Billfish gray reef shark Razorback sucker flounder quillback;\
-			clownfish medusafish Atlantic trout? Gouramie bichir frilled shark\
-			dragonet spiny dogfish cuckoo wrasse.</p>');
+	displayTopic("ukinimo goste i probudimo admina");
 }

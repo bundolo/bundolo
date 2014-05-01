@@ -1,41 +1,39 @@
 $(document).ready(function() {
-	$('#login_register').click(function() {
-		$('.login').removeClass('show').addClass('hidden');
-		$('.register').removeClass('hidden').addClass('show');
-	});
-	$('#login_reset').click(function() {
-		$('.login').removeClass('show').addClass('hidden');
-		$('.reset').removeClass('hidden').addClass('show');
-	});
-	$('#login_login').click(function() {
-		$('.login').removeClass('show').addClass('hidden');
-		$('.logout').removeClass('hidden').addClass('show');
-	});	
-	$('#register_register').click(function() {
-		$('.register').removeClass('show').addClass('hidden');
-		$('.login').removeClass('hidden').addClass('show');
-	});
-	$('#register_cancel').click(function() {
-		$('.register').removeClass('show').addClass('hidden');
-		$('.login').removeClass('hidden').addClass('show');
-	});
-	$('#logout_profile').click(function() {
-		displayDummyText();
-	});
-	$('#logout_add').click(function() {
-		//TODO show modal with dropdown of all types of content, defaulting to text
-		addText();
-	});
-	$('#logout_logout').click(function() {
-		$('.logout').removeClass('show').addClass('hidden');
-		$('.login').removeClass('hidden').addClass('show');
-	});
-	$('#reset_reset').click(function() {
-		$('.reset').removeClass('show').addClass('hidden');
-		$('.login').removeClass('hidden').addClass('show');
-	});
-	$('#reset_cancel').click(function() {
-		$('.reset').removeClass('show').addClass('hidden');
-		$('.login').removeClass('hidden').addClass('show');
-	});
+	displayLogin();
 });
+
+function displayLogin() {
+	$.get('templates/login.html', function(template) {
+	    var rendered = Mustache.render(template, {
+		});
+		$(".header_form").html(rendered);
+	});
+}
+
+function displayRegister() {
+	$.get('templates/register.html', function(template) {
+	    var rendered = Mustache.render(template, {
+		});
+		$(".header_form").html(rendered);
+	});
+}
+
+function displayReset() {
+	$.get('templates/reset.html', function(template) {
+	    var rendered = Mustache.render(template, {
+		});
+		$(".header_form").html(rendered);
+	});
+}
+
+function displayLoggedIn() {
+	$.get('templates/logged_in.html', function(template) {
+	    var rendered = Mustache.render(template, {
+		});
+		$(".header_form").html(rendered);
+	});
+}
+
+function displayStatusBar(title) {
+	$('.status_bar>div').text(title);
+}

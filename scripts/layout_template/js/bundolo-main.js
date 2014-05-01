@@ -1,15 +1,14 @@
 var homeHtml = "";
 $(document).ready(function() {
-  $('[data-toggle=offcanvas]').click(function() {
-    $('.row-offcanvas').toggleClass('active');
-  });
-  $('[title]').hover(
-	function() {
-		$('.status_bar>div').text($(this).attr('title'));
-	}, function() {
-		$('.status_bar>div').text('');
-	}
-  );
+	$('[data-toggle=offcanvas]').click(function() {
+		$('.row-offcanvas').toggleClass('active');
+	});
+	$('body').on('mouseenter', '[title]', function(e) {
+		displayStatusBar($(this).attr('title'));
+	});
+	$('body').on('mouseleave', '.navbar-header [title]', function(e) {
+		displayStatusBar('');
+	});
   var mainContent = $(".main>.jumbotron>.content");
   homeHtml = mainContent.html();
   addContextMenu(mainContent);

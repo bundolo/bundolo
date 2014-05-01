@@ -12,11 +12,16 @@ function saveText(textTitle, textDescription, textContent) {
 function displayHomeText() {
 	displayContent($(".main>.jumbotron>.content"), homeHtml);
 }
-function displayText(textTitle, textDescription, textContent) {
-	displayContent($(".main>.jumbotron>.content"), '<h1>'+textTitle+'</h1><h3>'+textDescription+'</h3>' + textContent);
+function displayText(author, title, description, content) {
+	//displayContent($(".main>.jumbotron>.content"), '<h1>'+textTitle+'</h1><h3>'+textDescription+'</h3>' + textContent);
+	
+	$.get('templates/text.html', function(template) {
+	    var rendered = Mustache.render(template, {"author": author, "title": title, "description": description, "content": content});
+	    displayContent($(".main>.jumbotron>.content"), rendered);
+	  });
 }
 function displayDummyText() {
-	displayText('Razorback sucker', 'dragonet spiny dogfish cuckoo wrasse', '<p>Combtooth blenny houndshark clown triggerfish paperbone,\
+	displayText('kiloster', 'Razorback sucker', 'dragonet spiny dogfish cuckoo wrasse', '<p>Combtooth blenny houndshark clown triggerfish paperbone,\
 			"European eel tilapia sea snail tilapia waryfish," Bitterling\
 			crocodile shark. Flagblenny Hammerjaw stonecat freshwater herring\
 			false brotula false moray; kanyu Atlantic eel blue triggerfish\

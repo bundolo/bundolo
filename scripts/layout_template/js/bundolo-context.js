@@ -64,19 +64,6 @@ function addContextMenu(parentElement) {
         return false;
     });
 	commentsButton.attr("title", "Comments");
-	commentsButton.hover(
-		function() {
-			$('.status_bar>div').text($(this).attr('title'));
-			$(this).parent().addClass("hover");
-    		if ($(this).parent().parent().css("overflow")=="hidden") {
-    			$(this).parent().parent().addClass("show-overflow");
-    		}
-		}, function() {
-			$('.status_bar>div').text('');
-			$(this).parent().removeClass("hover");
-    		$(this).parent().parent().removeClass("show-overflow");
-		}
-	);
 	parentElement.append(commentsButton);
 	
 }
@@ -107,20 +94,14 @@ function addCommentButton(parentElement) {
 			<i class="fa fa-circle fa-stack-2x"></i>\
 			<i class="fa fa-plus fa-stack-1x fa-inverse"></i>\
 			</span>');
-
-	commentButton.hover(
-			function() {
-				$('.status_bar>div').text($(this).attr('title'));
-				$(this).parent().addClass("hover");
-	    		if ($(this).parent().parent().css("overflow")=="hidden") {
-	    			$(this).parent().parent().addClass("show-overflow");
-	    		}
-			}, function() {
-				$('.status_bar>div').text('');
-				$(this).parent().removeClass("hover");
-	    		$(this).parent().parent().removeClass("show-overflow");
-			}
-		);
 	parentElement.append(commentButton);
 	return commentButton;
+}
+
+function displayComment(author, content, parentElement) {
+	$.get('templates/comment.html', function(template) {
+	    var rendered = Mustache.render(template, {"author": author, "content": content});
+	    parentElement.append($(rendered));
+	    //displayContent($(".main>.jumbotron>.content"), rendered);
+	  });
 }
