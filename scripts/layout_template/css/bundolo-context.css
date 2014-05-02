@@ -97,7 +97,7 @@
 	overflow: visible;
 }
 
-.comment-button {
+.comment-button, .root-comment-button {
 	font-size: 10px;
 	color: #000;
 	cursor: pointer;

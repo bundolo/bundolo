@@ -31,6 +31,10 @@ $(document).ready(function() {
   		modalDialog.removeClass("edit-comment");
   		modalDialog.removeClass("edit-text");
 	});
+  	modalDialog.on('shown.bs.modal', function(e) {
+  		//TODO for comments editor should be focused, but for some other content, maybe some other field
+  		$('.note-editable').focus();
+	});
   	modalDialog.find('.btn-primary').click(function(e) {
   		if (modalDialog.hasClass('edit-comment')) {
   			saveComment($('#edit_content').code());
@@ -44,4 +48,9 @@ $(document).ready(function() {
 function displayContent(parentElement, html) {
 	parentElement.html(html);
 	addContextMenu(parentElement);
+}
+
+function sanitize(content) {
+	//TODO make this more generic. strip all tags for some content, be selective for other
+	return content.replace(/(<([^>]+)>)/ig,"");
 }
