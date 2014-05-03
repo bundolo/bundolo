@@ -1,7 +1,7 @@
 <ul id="sidebarAccordion" class="sidebar-nav panel-group">
 	{{#collapsibles}}
 		<li class="panel panel-default">
-			<span title="{{title}}" data-parent="#sidebarAccordion" data-target="#collapse_{{id}}" data-toggle="collapse" class="{{id}}_button pull-left fa-stack fa-2x">
+			<span title="{{title}}" data-parent="#sidebarAccordion" data-target="#collapse_{{id}}" data-toggle="collapse" class="{{id}}_button pull-left fa-stack fa-2x"  onClick="display_{{id}}();">
 				<i class="fa fa-circle fa-stack-2x"></i>
 				<i class="fa fa-{{icon}} fa-stack-1x fa-inverse"></i>
 				<span class="pipe_hr"></span>

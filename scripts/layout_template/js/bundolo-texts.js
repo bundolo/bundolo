@@ -1,23 +1,35 @@
+$(document).ready(function() {
+	$('body').on('click','.main .texts table>tbody>tr', function(e) {
+		displayDummyText();
+	});
+});
+
+function display_texts() {
+	$.get('templates/texts.html', function(template) {
+	    var rendered = Mustache.render(template, {});
+	    var contentElement = $('.main>.jumbotron>.content');
+	    contentElement.attr('class', 'content texts');
+	    displayContent(contentElement, rendered);
+	  });
+}
+
 function addText() {
 	$('#modal').addClass("edit-text");
 	$('#modal').modal('show');
 }
 
-function saveText(textTitle, textDescription, textContent) {
+function saveText(title, description, content) {
 	//TODO validation
-	displayText(textTitle, textDescription, textContent);
+	displayText('dummy_user', title, description, content);
 	$('#modal').modal('hide');
 }
 
-function displayHomeText() {
-	displayContent($(".main>.jumbotron>.content"), homeHtml);
-}
 function displayText(author, title, description, content) {
-	//displayContent($(".main>.jumbotron>.content"), '<h1>'+textTitle+'</h1><h3>'+textDescription+'</h3>' + textContent);
-	
 	$.get('templates/text.html', function(template) {
 	    var rendered = Mustache.render(template, {"author": author, "title": title, "description": description, "content": content});
-	    displayContent($(".main>.jumbotron>.content"), rendered);
+	    var contentElement = $('.main>.jumbotron>.content');
+	    contentElement.attr('class', 'content text');
+	    displayContent(contentElement, rendered);
 	  });
 }
 function displayDummyText() {

@@ -54,3 +54,9 @@ function sanitize(content) {
 	//TODO make this more generic. strip all tags for some content, be selective for other
 	return content.replace(/(<([^>]+)>)/ig,"");
 }
+
+function displayHome() {
+	var contentElement = $('.main>.jumbotron>.content');
+    contentElement.attr('class', 'content');
+	displayContent(contentElement, homeHtml);
+}

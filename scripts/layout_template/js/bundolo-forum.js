@@ -1,7 +1,9 @@
 $(document).ready(function() {
-	$('.main a[data-toggle="tab"]').on('show.bs.tab', function(e) {
-		//TODO fix this
-		$('.main p').addClass("hidden");
+	$('body').on('show.bs.tab', '.main .forum a[data-toggle="tab"]', function(e) {
+		$('.main .topic').html('');
+	});
+	$('body').on('click','.main .forum table>tbody>tr', function(e) {
+		displayDummyTopic();
 	});
 });
 
@@ -15,7 +17,7 @@ function savePost(postContent) {
 	displayText(textTitle, textDescription, textContent);
 	$('#modal').modal('hide');
 }
-function displayForum() {
+function display_forum() {
 	$.get('templates/forum.html', function(template) {
 	    var rendered = Mustache.render(template, {
 			  "categories": [
@@ -26,16 +28,15 @@ function displayForum() {
 			 			    { "title": "Archive", "id" : "archive" }
 			 			  ]
 			 			});
-	    displayContent($(".main>.jumbotron>.content"), rendered);
-	    $('.main table>tbody>tr').click(function() {
-			displayDummyTopic();
-		});
+	    var contentElement = $('.main>.jumbotron>.content');
+	    contentElement.attr('class', 'content forum');
+	    displayContent(contentElement, rendered);
 	  });
 }
 function displayTopic(title) {
 	$.get('templates/topic.html', function(template) {
 	    var rendered = Mustache.render(template, {"title": title});
-	    displayContent($(".main>.jumbotron>.content"), rendered);
+	    $(".main .forum .topic").html(rendered);
 	  });
 }
 function displayDummyTopic() {
