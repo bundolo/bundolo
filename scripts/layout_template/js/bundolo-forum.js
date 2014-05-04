@@ -9,12 +9,13 @@ $(document).ready(function() {
 
 function addPost() {
 	$('#modal').addClass("edit-post");
+	$('#editor_label').html('Add post');
 	$('#modal').modal('show');
 }
 
-function savePost(postContent) {
+function savePost(content) {
 	//TODO validation
-	displayText(textTitle, textDescription, textContent);
+	displayPost(textTitle, textDescription, textContent);
 	$('#modal').modal('hide');
 }
 function display_forum() {
@@ -34,10 +35,24 @@ function display_forum() {
 	  });
 }
 function displayTopic(title) {
+	if (!$('.main>.jumbotron>.forum').length) {
+		//TODO callback might be needed, to wait until forum is shown before showing topic
+		display_forum();
+	}
 	$.get('templates/topic.html', function(template) {
 	    var rendered = Mustache.render(template, {"title": title});
 	    $(".main .forum .topic").html(rendered);
 	  });
+}
+function addTopic() {
+	$('#modal').addClass("edit-topic");
+	$('#editor_label').html('Add topic');
+	$('#modal').modal('show');
+}
+function saveTopic(title, content) {
+	//TODO validation
+	displayTopic(title);
+	$('#modal').modal('hide');
 }
 function displayDummyTopic() {
 	displayTopic("ukinimo goste i probudimo admina");

@@ -87,6 +87,7 @@ function addContextMenu(parentElement) {
 function addComment(parentElement) {
 	$('#modal').addClass("edit-comment");
 	$('#edit_content').code('');
+	$('#editor_label').html('Add comment');
 	commentParentElement = parentElement;
 	$('#modal').modal('show');
 }

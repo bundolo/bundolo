@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/summernote.css" />
+<link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/bundolo.css">
 </head>
 
@@ -75,7 +76,7 @@ b::::::b                                                          d::::::d      
 			<div class="main">
 				<div class="jumbotron">
 				<div class="content welcome">
-					<!-- <pre>
+					<pre>
 bbbbbbbb                                                          dddddddd                                          
 b::::::b                                                          d::::::d                 lllllll                  
 b::::::b                                                          d::::::d                 l:::::l                  
@@ -92,7 +93,7 @@ b::::::b                                                          d::::::d      
  b:::::bbbbbb::::::bu:::::::::::::::uun::::n    n::::nd::::::ddddd::::::ddo:::::ooooo:::::ol::::::lo:::::ooooo:::::o
  b::::::::::::::::b  u:::::::::::::::un::::n    n::::n d:::::::::::::::::do:::::::::::::::ol::::::lo:::::::::::::::o
  b:::::::::::::::b    uu::::::::uu:::un::::n    n::::n  d:::::::::ddd::::d oo:::::::::::oo l::::::l oo:::::::::::oo 
- bbbbbbbbbbbbbbbb       uuuuuuuu  uuuunnnnnn    nnnnnn   ddddddddd   ddddd   ooooooooooo   llllllll   ooooooooooo   </pre> -->
+ bbbbbbbbbbbbbbbb       uuuuuuuu  uuuunnnnnn    nnnnnn   ddddddddd   ddddd   ooooooooooo   llllllll   ooooooooooo   </pre>
 					<p>Combtooth blenny houndshark clown triggerfish paperbone,
 						"European eel tilapia sea snail tilapia waryfish," Bitterling
 						crocodile shark. Flagblenny Hammerjaw stonecat freshwater herring
@@ -108,32 +109,36 @@ b::::::b                                                          d::::::d      
 			<div class="row slider"></div>
 		</div>
 	</div>
-	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="editor_label" aria-hidden="true" data-backdrop="static">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	        <h4 class="modal-title" id="editor_label">Modal title</h4>
 	      </div>
 	      <div class="modal-body">
 	      	<form role="form">
 			  <div class="form-group title">
-			    <label for="add_new_title">Title</label>
+			    <label for="edit_title">Title</label>
 			    <input type="text" class="form-control" id="edit_title" placeholder="Enter title">
 			  </div>
 			  <div class="form-group description">
-			    <label for="add_new_description">Short description</label>
+			    <label for="edit_description">Short description</label>
 			    <textarea cols="45" rows="4" class="form-control" id="edit_description" placeholder="Short description"></textarea>
 			  </div>
 			  <div class="form-group content">
 			    <label for="edit_content">Content</label>
 			    <div id="edit_content"></div>
 			  </div>
+			  <div class="form-group date">
+			  	<label for="edit_date">Date</label>
+			  	<input type="text" class="form-control" id="edit_date" placeholder="Enter date">
+			  </div>
 			</form>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
+	        <button type="button" class="btn btn-primary">Save</button>
 	      </div>
 	    </div>
 	  </div>
@@ -158,6 +163,7 @@ b::::::b                                                          d::::::d      
 	<script src="js/summernote.min.js"></script>
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
 	<script src="js/bundolo-main.js"></script>
 	<script src="js/bundolo-header.js"></script>
 	<script src="js/bundolo-context.js"></script>
@@ -167,5 +173,8 @@ b::::::b                                                          d::::::d      
 	<script src="js/bundolo-forum.js"></script>
 	<script src="js/bundolo-slider.js"></script>
 	<script src="js/bundolo-news.js"></script>
+	<script src="js/bundolo-authors.js"></script>
+	<script src="js/bundolo-connections.js"></script>
+	<script src="js/bundolo-contests.js"></script>
 </body>
 </html>

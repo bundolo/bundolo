@@ -27,12 +27,25 @@ function displaySerial(author, title, description) {
 
 function addEpisode() {
 	$('#modal').addClass("edit-episode");
+	$('#editor_label').html('Add episode');
 	$('#modal').modal('show');
 }
 
 function saveEpisode(title, content) {
 	//TODO validation
 	displayEpisode('dummy_user', title, content);
+	$('#modal').modal('hide');
+}
+
+function addSerial() {
+	$('#modal').addClass("edit-serial");
+	$('#editor_label').html('Add serial');
+	$('#modal').modal('show');
+}
+
+function saveSerial(title, description) {
+	//TODO validation
+	displaySerial('dummy_user', title, description);
 	$('#modal').modal('hide');
 }
 

@@ -26,10 +26,30 @@ $(document).ready(function() {
 	    //['help', ['help']] //no help button
 	  ]
 	});
+  	/*$('#edit_date').datepicker({
+	    format: "dd/mm/yyyy",
+	    weekStart: 1
+	});*/
+  	$('#edit_date').datepicker({
+	    format: "dd/mm/yyyy",
+	    weekStart: 1
+	}).on('show', function() {
+		//this is a fix for datepicker not showing when it's opened from modal dialog
+  		var modal = $('#edit_date').closest('.modal');
+  		var datePicker = $('body').find('.datepicker');
+  		if(!modal.length) {
+  			$(datePicker).css('z-index', 'auto');
+  			return;
+  		}
+  		var zIndexModal = $(modal).css('z-index');
+  		$(datePicker).css('z-index', zIndexModal + 1);
+  	});
+  	
   	var modalDialog = $('#modal');
   	modalDialog.on('hidden.bs.modal', function(e) {
-  		modalDialog.removeClass("edit-comment");
-  		modalDialog.removeClass("edit-text");
+  		modalDialog.attr('class', 'modal fade');  		
+  		//modalDialog.removeClass("edit-comment");
+  		//modalDialog.removeClass("edit-text");
 	});
   	modalDialog.on('shown.bs.modal', function(e) {
   		//TODO for comments editor should be focused, but for some other content, maybe some other field
@@ -40,6 +60,20 @@ $(document).ready(function() {
   			saveComment($('#edit_content').code());
   		} else if (modalDialog.hasClass('edit-text')) {
   			saveText($('#edit_title').val(), $('#edit_description').val(), $('#edit_content').code());
+  		} else if (modalDialog.hasClass('edit-serial')) {
+			saveSerial($('#edit_title').val(), $('#edit_description').val());
+  		} else if (modalDialog.hasClass('edit-episode')) {
+			saveEpisode($('#edit_title').val(), $('#edit_content').code());
+  		} else if (modalDialog.hasClass('edit-topic')) {
+			saveTopic($('#edit_title').val(), $('#edit_content').code());
+  		} else if (modalDialog.hasClass('edit-post')) {
+			savePost($('#edit_content').code());
+  		} else if (modalDialog.hasClass('edit-news')) {
+			saveNews($('#edit_title').val(), $('#edit_content').code());
+  		} else if (modalDialog.hasClass('edit-connection')) {
+			saveConnection($('#edit_title').val(), $('#edit_content').code());
+  		} else if (modalDialog.hasClass('edit-contest')) {
+			saveContest($('#edit_title').val(), $('#edit_date').val(), $('#edit_content').code());
   		}
         return false;
     });

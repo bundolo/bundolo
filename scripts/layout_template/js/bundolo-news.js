@@ -24,16 +24,21 @@ function display_news() {
 
 function addNews() {
 	$('#modal').addClass("edit-news");
+	$('#editor_label').html('Add news');
 	$('#modal').modal('show');
 }
 
 function saveNews(title, content) {
 	//TODO validation
-	displayNews('dummy_user', date, title, content);
+	displaySingleNews('dummy_user', '04.05.2014.', title, content);
 	$('#modal').modal('hide');
 }
 
 function displaySingleNews(author, date, title, content) {
+	if (!$('.main>.jumbotron>.news').length) {
+		//TODO callback might be needed, to wait until news are shown before showing single news
+		display_news();
+	}
 	$.get('templates/single_news.html', function(template) {
 	    var rendered = Mustache.render(template, {"author": author, "title": title, "date": date, "content": content});
 	    var contentElement = $('.main>.jumbotron>.news>.single_news');

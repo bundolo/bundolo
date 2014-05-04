@@ -15,6 +15,38 @@
 	padding: 13px 0;	
 }
 
-.edit-comment .title, .edit-comment .description {
+.edit-comment .title, .edit-comment .description, .edit-comment .date {
+	display: none;
+}
+
+.edit-text .date {
+	display: none;
+}
+
+.edit-serial .date, .edit-serial .content {
+	display: none;
+}
+
+.edit-episode .date, .edit-episode .description {
+	display: none;
+}
+
+.edit-topic .date, .edit-topic .description  {
+	display: none;
+}
+
+.edit-post .date, .edit-post .description {
+	display: none;
+}
+
+.edit-news .date, .edit-news .description {
+	display: none;
+}
+
+.edit-connection .date, .edit-connection .description {
+	display: none;
+}
+
+.edit-contest .description {
 	display: none;
 }

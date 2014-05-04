@@ -92,6 +92,10 @@
 	margin: 5px 0;
 	padding: 10px;
 }
+
+.navbar .dropdown-menu {
+	right: auto;
+}
     
 @media (max-width: 978px) {
     .navbar .navbar-header {

@@ -15,6 +15,7 @@ function display_texts() {
 
 function addText() {
 	$('#modal').addClass("edit-text");
+	$('#editor_label').html('Add text');
 	$('#modal').modal('show');
 }
 
