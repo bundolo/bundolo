@@ -1,0 +1,21 @@
+<table class="table table-striped tablesorter">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Date added</th>
+			<th>Valid until</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#contests}}
+			<tr>
+				<td>{{title}}</td>				
+				<td>{{author}}</td>
+				<td>{{date}}</td>
+				<td>{{expiration_date}}</td>								
+			</tr>
+		{{/contests}}
+	</tbody>
+</table>
+<div class="contest"></div>
