@@ -74,9 +74,18 @@ $(document).ready(function() {
 			saveConnection($('#edit_title').val(), $('#edit_content').code());
   		} else if (modalDialog.hasClass('edit-contest')) {
 			saveContest($('#edit_title').val(), $('#edit_date').val(), $('#edit_content').code());
+  		} else if (modalDialog.hasClass('edit-inquiry')) {
+  			saveInquiry($('#edit_title').val(), $('#edit_content').code());
   		}
+  		
         return false;
     });
+  	$('body').on('click', '.navbar .about', function(e) {
+		displayAbout();
+	});
+  	$('body').on('click', '.navbar .contact', function(e) {
+		displayContact();
+	});
 });
 
 function displayContent(parentElement, html) {
@@ -93,4 +102,35 @@ function displayHome() {
 	var contentElement = $('.main>.jumbotron>.content');
     contentElement.attr('class', 'content');
 	displayContent(contentElement, homeHtml);
+}
+
+function displayAbout() {
+	$.get('templates/about.html', function(template) {
+	    var rendered = Mustache.render(template, {});
+	    var contentElement = $('.main>.jumbotron>.content');
+	    contentElement.attr('class', 'content about');
+	    displayContent(contentElement, rendered);
+	  });
+}
+
+function displayContact() {
+	$.get('templates/contact.html', function(template) {
+	    var rendered = Mustache.render(template, {});
+	    var contentElement = $('.main>.jumbotron>.content');
+	    contentElement.attr('class', 'content contact');
+	    displayContent(contentElement, rendered);
+	  });
+}
+
+function addInquiry() {
+	$('#modal').addClass("edit-inquiry");
+	$('#editor_label').html('Send us a message');
+	$('#modal').modal('show');
+}
+
+function saveInquiry(title, content) {
+	//TODO validation	
+	//TODO send email
+	//TODO show some thank you message
+	$('#modal').modal('hide');
 }

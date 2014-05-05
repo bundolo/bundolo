@@ -50,3 +50,7 @@
 .edit-contest .description {
 	display: none;
 }
+
+.edit-inquiry .date, .edit-inquiry .description {
+	display: none;
+}
