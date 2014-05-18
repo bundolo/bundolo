@@ -153,7 +153,7 @@ z-index: 2;
 }
 
 .sidebar .panel-heading input {
-	width: 60%;
+	width: 40%;
 	text-align: right;
 }
 
@@ -240,18 +240,21 @@ z-index: 2;
 	color: #000;
 }
 
-.sidebar .tablesorter input {
+.sidebar .table input {
 	width: 100%;
 }
 
-.sidebar .tablesorter thead {
+.sidebar .table thead {
 	display: block;
+}
 
-	}
-
-.sidebar .tablesorter tbody {
+.sidebar .table tbody {
 display: block;
 height: 162px;
 overflow: auto;
 width: 100%;
+}
+.sidebar .dropdown-menu {
+	left: auto;
+	right: auto;
 }

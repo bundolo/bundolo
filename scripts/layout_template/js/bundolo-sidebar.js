@@ -17,37 +17,13 @@ function displaySidebar() {
 			 			    { "title": "Serials", "id" : "serials", "icon" : "book", "columns" : ["author", "title", "date", "last_activity"] },
 			 			    { "title": "Authors", "id" : "authors", "icon" : "user", "columns" : ["author", "title", "date", "last_activity"] },
 			 			    { "title": "Announcements", "id" : "announcements", "icon" : "bullhorn", "columns" : ["author", "title", "date", "last_activity"] },
-			 			    { "title": "Forum", "id" : "topics", "icon" : "comments-o", "columns" : ["author", "title", "date", "last_activity"] },
+			 			    { "title": "Forum", "id" : "topics", "icon" : "comments-o", "columns" : ["author", "title", "date", "last_activity"], "categories" : [{"title" : "Literature", "id" : "literature"}, {"title" : "Bundolo", "id" : "bundolo"}, {"title" : "Various", "id" : "various"}, {"title" : "Suggestions", "id" : "suggestions"}, {"title" : "Archive", "id" : "archive"} ] },
 			 			    { "title": "Contests", "id" : "contests", "icon" : "eye", "columns" : ["author", "title", "date", "last_activity"] },
-			 			    { "title": "Connections", "id" : "connections", "icon" : "link", "columns" : ["author", "title", "date", "last_activity"] },
+			 			    { "title": "Connections", "id" : "connections", "icon" : "link", "columns" : ["author", "title", "date", "last_activity"], "categories" : [{"title" : "Literature", "id" : "literature"}, {"title" : "Art", "id" : "art"}, {"title" : "Alternative comics", "id" : "comics"}, {"title" : "Online magazines", "id" : "magazines"}, {"title" : "Underground", "id" : "underground"} ] },
 			 			  ]
 			 			});
 	    $(".sidebar").html(rendered);
 	    //TODO assign event handlers if any
-	    /*$(".tablesorter").tablesorter({
-			theme : 'bootstrap',
-			headerTemplate : '{content} {icon}',
-			widgets : [ 'zebra', 'columns', 'uitheme', 'filter', 'scroller' ],
-			sortList : [ [ 0, 0 ], [ 1, 0 ] ],
-			filter_cssFilter  : 'tablesorter-filter',
-	        filter_startsWith : false,
-	        filter_ignoreCase : true,
-	        widgetOptions : {
-	            scroller_height : 150,
-	            scroller_barWidth : 17,
-	            scroller_jumpToHeader: true,
-	            scroller_idPrefix : 's_'
-	          }
-		});*/
-	    $(".tablesorter").tablesorter({
-			theme : 'bootstrap',
-			headerTemplate : '{content} {icon}',
-			widgets : [ 'zebra', 'columns', 'uitheme', 'filter' ],
-			sortList : [ [ 0, 0 ], [ 1, 0 ] ],
-			filter_cssFilter  : 'tablesorter-filter',
-	        filter_startsWith : false,
-	        filter_ignoreCase : true
-		});
 		$('#sidebarAccordion').on('show.bs.collapse', function(e) {
 			$(e.target).parent('.panel-default')
 					.addClass('active');
@@ -94,7 +70,6 @@ function displaySidebarAccordion(type) {
 		var rendered = Mustache.render(template, items);
 		var tableBody = $('.sidebar #collapse_'+type+' tbody');
 		tableBody.append(rendered);
-		$('.sidebar #collapse_'+type+' .tablesorter').trigger("updateAll");
 		tableBody.bind('scroll', function() {
 	    	if($(this).scrollTop() + $(this).innerHeight() >= this.scrollHeight) {
     			var additional_items = {"items": []};
@@ -104,7 +79,6 @@ function displaySidebarAccordion(type) {
     			}
     		    var rendered_rows = Mustache.render(template, additional_items);
     		    $(this).append(rendered_rows);
-    		    $('.sidebar #collapse_'+type+' .tablesorter').trigger("updateAll");
 	        }
 	    });
 	  });

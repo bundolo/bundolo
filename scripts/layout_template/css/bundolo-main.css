@@ -95,10 +95,6 @@ footer {
 	text-shadow: none;
 }
 
-.main .tablesorter-bootstrap .tablesorter-header, .sidebar .tablesorter-bootstrap .tablesorter-header {
-	margin: 0;
-}
-
 .main .table>thead>tr>th, .sidebar .table>thead>tr>th {
 	border: 0;
 	cursor: pointer;
@@ -106,11 +102,6 @@ footer {
 
 .main .table>tbody>tr:hover, .sidebar .table>tbody>tr:hover {
 	cursor: pointer;
-}
-
-.main .tablesorter-bootstrap .tablesorter-header-inner, .sidebar .tablesorter-bootstrap .tablesorter-header-inner {
-	padding-top: 0;
-	padding-bottom: 0;
 }
 
 .main .table>tbody>tr:hover>td, .sidebar .table>tbody>tr:hover>td {

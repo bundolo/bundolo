@@ -90,22 +90,6 @@ $(document).ready(function() {
 
 function displayContent(parentElement, html) {
 	parentElement.html(html);
-	
-	/*parentElement.find(".tablesorter").tablesorter({
-		theme : 'bootstrap',
-		headerTemplate : '{content} {icon}',
-		widgets : [ 'zebra', 'columns', 'uitheme', 'filter', 'scroller' ],
-		widgetOptions : {
-		      scroller_height : 300,
-		      scroller_barWidth : 17,
-		      scroller_jumpToHeader: true,
-		      scroller_idPrefix : 's_'
-		    },
-		sortList : [ [ 0, 0 ], [ 1, 0 ] ],
-		filter_cssFilter  : 'tablesorter-filter',
-        filter_startsWith : false,
-        filter_ignoreCase : true
-	});*/
 	addContextMenu(parentElement);
 }
 
