@@ -1,50 +1,32 @@
 $(document).ready(function() {
-	$('body').on('show.bs.tab', '.main .connections a[data-toggle="tab"]', function(e) {
-		$('.main .connection').html('');
-	});
-	$('body').on('click', '.sidebar #collapse_connections table>tbody>tr', function(e) {
-		displayDummyConnection();
+	$('body').on('click', '.sidebar #collapse_announcements table>tbody>tr', function(e) {
+		displayDummyAnnouncement();
 	});
 });
 
-function addConnection() {
-	$('#modal').addClass("edit-connection");
-	$('#editor_label').html('Add connection');
+function addAnnouncement() {
+	$('#modal').addClass("edit-announcement");
+	$('#editor_label').html('Add announcement');
 	$('#modal').modal('show');
 }
 
-function saveConnection(title, content) {
+function saveAnnouncement(title, content) {
 	//TODO validation
-	displayConnection(title, content);
+	displayAnnouncement({'author' : 'dummy_user', 'title' : title, 'content' : content});
 	$('#modal').modal('hide');
 }
-function display_connections() {
-	$.get('templates/connections.html', function(template) {
-	    var rendered = Mustache.render(template, {
-			  "groups": [
-			 			    { "title": "Literature", "id" : "literature" },
-			 			    { "title": "Culture", "id" : "culture" },
-			 			    { "title": "Alternative comics", "id" : "comics" },
-			 			    { "title": "Online magazines", "id" : "magazines" },
-			 			    { "title": "Underground culture", "id" : "underground" }
-			 			  ]
-			 			});
-	    var contentElement = $('.main>.jumbotron>.content');
-	    contentElement.attr('class', 'content connections');
-	    displayContent(contentElement, rendered);
-	  });
-}
-function displayConnection(connection) {
-	$.get('templates/connection.html', function(template) {
-	    var rendered = Mustache.render(template, connection);
+
+function displayAnnouncement(announcement) {
+	$.get('templates/announcement.html', function(template) {
+	    var rendered = Mustache.render(template, announcement);
 	    var contentElement = $('.main>.jumbotron>.content');
 	    displayContent(contentElement, rendered);
 	});
 }
-function displayDummyConnection() {
-	displayConnection(generateDummyConnection(587));
+function displayDummyAnnouncement() {
+	displayAnnouncement(generateDummyAnnouncement(456));
 }
-function generateDummyConnection(id) {
+function generateDummyAnnouncement(id) {
 	return { "title": "Razorback sucker" + id, "author" : "dummy_user" + id, "date" : "10. 05. 2014.", "last_activity" : "11. 05. 2014.", "description" : "dragonet spiny dogfish cuckoo wrasse" + id, "content" :
 		'<p>Combtooth blenny houndshark clown triggerfish paperbone,\
 		"European eel tilapia sea snail tilapia waryfish," Bitterling\

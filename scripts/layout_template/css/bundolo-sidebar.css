@@ -137,13 +137,13 @@ z-index: 2;
 }
 
 .sidebar table td, .sidebar table th {
-	width: 36%;
+	width: 25%;
 	word-wrap: break-word;
 	padding: 0 !important;
 }
 
 .sidebar table td:last-child,.sidebar table th:last-child {
-	width: 28%;
+	/*width: 28%;*/
 	text-align: right;
 }
 
@@ -192,7 +192,7 @@ z-index: 2;
 	width: 65px;
 }
 
-.sidebar .panel-default>span.news_button {
+.sidebar .panel-default>span.announcements_button {
 	margin-left: -66px;
 	width: 51px;
 }
@@ -207,7 +207,7 @@ z-index: 2;
 	width: 47px; 
 }
 
-.sidebar .panel-default>span.forum_button {
+.sidebar .panel-default>span.topics_button {
 	margin-left: -76px; 
 	width: 61px;
 }
@@ -242,4 +242,16 @@ z-index: 2;
 
 .sidebar .tablesorter input {
 	width: 100%;
+}
+
+.sidebar .tablesorter thead {
+	display: block;
+
+	}
+
+.sidebar .tablesorter tbody {
+display: block;
+height: 162px;
+overflow: auto;
+width: 100%;
 }
